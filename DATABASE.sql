@@ -7,7 +7,10 @@ use Dietation;
 create table if not exists Users (
 	UserID int not null auto_increment,
     FirstName varchar(255) not null,
-    LastName varchar(255) not null,
+    LastName varchar(255),
+    AuthenticationMethod varchar(255),
+    LoginID varchar(255),
+    EmailAddress varchar(255) not null,
     Primary key (UserID)
 );
 
