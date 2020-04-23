@@ -12,33 +12,35 @@
 <div class="register_page">
     <div class="container">
         <div class="row">
-            <div class="register_block">
-                <div class="row">
-                    <h1>Register Account Form</h1>
-                </div>
-                <div class="row">
-                    <p>Full Name</p>
-                </div>
-                <div class="row">
-                    <asp:TextBox ID="txtRegisterName" runat="server"></asp:TextBox>
-                </div>
-                <div class="row">
-                    <p>Your Email</p>
-                </div>
-                <div  class="row">
-                    <asp:TextBox ID="txtRegisterEmail" runat="server"></asp:TextBox>
-                </div>
-                <div class="row">
-                    <p>Password</p>
-                </div>
-                <div class="row">
-                    <asp:TextBox ID="txtRegisterPassword" runat="server"></asp:TextBox>
-                </div>
-                <div class="row">
-                    <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
-                </div>
-            </div>
+            <h1>Registration</h1>
         </div>
+        <div class="row">
+                <p>First Name</p>
+        </div>
+        <div class="row">
+            <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
+        </div>
+        <div class="row">
+                <p>Last Name</p>
+        </div>
+        <div class="row">
+                <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+        </div> 
+        <div class="row">
+             <p>Your Email</p>
+         </div>
+         <div class="row">
+             <asp:TextBox ID="txtRegisterEmail" runat="server"></asp:TextBox>
+         </div>
+         <div class="row">
+             <p>Password</p>
+         </div>
+         <div class="row">
+             <asp:TextBox ID="txtRegisterPassword" runat="server"></asp:TextBox>
+         </div>
+         <div class="row">
+             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
+         </div>
     </div>
 </div>
 </form>

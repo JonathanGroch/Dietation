@@ -113,3 +113,4 @@ D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.csproj.CoreCompil
 D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.csproj.CopyComplete
 D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.dll
 D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.pdb
+D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.csprojResolveAssemblyReference.cache

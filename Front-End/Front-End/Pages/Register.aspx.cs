@@ -18,7 +18,7 @@ namespace Front_End.Pages
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            User u = new User(txtRegisterEmail.Text, txtRegisterName.Text, txtRegisterPassword.Text);
+            User u = new User(txtRegisterEmail.Text, txtFirstName.Text, txtRegisterPassword.Text, txtLastName.Text);
 
         }
     }
