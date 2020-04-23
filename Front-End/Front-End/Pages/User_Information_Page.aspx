@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login_Page.aspx.cs" Inherits="Front_End.Login_Page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User_Information_Page.aspx.cs" Inherits="Front_End.User_Information_Page" %>
 
 <!DOCTYPE html>
 
@@ -32,6 +32,7 @@
             <div class="row">
                 <div class="user_information_block_2">
                     <h3>Saved Filters</h3>
+                    
                 </div>
             </div>
         </div>

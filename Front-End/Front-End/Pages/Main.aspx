@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User_Information_Page.aspx.cs" Inherits="Front_End.User_Information_Page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="Front_End.Pages.Main" %>
 
 <!DOCTYPE html>
 
@@ -35,8 +35,8 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <asp:TextBox ID="txtSearchBox" runat="server" Font-Italic="True" Columns="64"></asp:TextBox>
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnSearchButton" runat="server" Text="Search!" />
-            &nbsp;<asp:Button ID="btnCreateCustom" runat="server" Text="Create Custom Filter" />
+                <asp:Button ID="btnSearchButton" runat="server" Text="Search!" OnClick="btnSearchButton_Click" />
+            &nbsp;<asp:Button ID="btnCreateCustom" runat="server" Text="Create Custom Filter" OnClick="btnCreateCustom_Click" />
             </div>
         </div>
         <div class="row">

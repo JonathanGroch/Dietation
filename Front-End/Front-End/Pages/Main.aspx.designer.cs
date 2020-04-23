@@ -7,126 +7,135 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Front_End {
+namespace Front_End.Pages {
     
     
-    public partial class Custom_Filter {
+    public partial class Main {
         
         /// <summary>
-        /// main_filter control.
+        /// main_search control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm main_filter;
+        protected global::System.Web.UI.HtmlControls.HtmlForm main_search;
         
         /// <summary>
-        /// lblFilterLabel control.
+        /// txtSearchBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFilterLabel;
+        protected global::System.Web.UI.WebControls.TextBox txtSearchBox;
         
         /// <summary>
-        /// txtFilterTitle control.
+        /// btnSearchButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFilterTitle;
+        protected global::System.Web.UI.WebControls.Button btnSearchButton;
         
         /// <summary>
-        /// btnRenameTitle control.
+        /// btnCreateCustom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRenameTitle;
+        protected global::System.Web.UI.WebControls.Button btnCreateCustom;
         
         /// <summary>
-        /// Label1 control.
+        /// chbGlutenFree control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.CheckBox chbGlutenFree;
         
         /// <summary>
-        /// txtSearchIngredient control.
+        /// chbDairyFree control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearchIngredient;
+        protected global::System.Web.UI.WebControls.CheckBox chbDairyFree;
         
         /// <summary>
-        /// btnAddIngredient control.
+        /// chbNutFree control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddIngredient;
+        protected global::System.Web.UI.WebControls.CheckBox chbNutFree;
         
         /// <summary>
-        /// btnRemoveItem control.
+        /// chbCornFree control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRemoveItem;
+        protected global::System.Web.UI.WebControls.CheckBox chbCornFree;
         
         /// <summary>
-        /// btnClearList control.
+        /// chbVegan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClearList;
+        protected global::System.Web.UI.WebControls.CheckBox chbVegan;
         
         /// <summary>
-        /// lblFilterTitle control.
+        /// chbVegetarian control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFilterTitle;
+        protected global::System.Web.UI.WebControls.CheckBox chbVegetarian;
         
         /// <summary>
-        /// lbxViewableFilterList control.
+        /// chbPescatarian control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbxViewableFilterList;
+        protected global::System.Web.UI.WebControls.CheckBox chbPescatarian;
         
         /// <summary>
-        /// ctnSaveFilter control.
+        /// chbCustom1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ctnSaveFilter;
+        protected global::System.Web.UI.WebControls.CheckBox chbCustom1;
         
         /// <summary>
-        /// btnClearFilter control.
+        /// chbCustom2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClearFilter;
+        protected global::System.Web.UI.WebControls.CheckBox chbCustom2;
+        
+        /// <summary>
+        /// chbCustom3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chbCustom3;
     }
 }

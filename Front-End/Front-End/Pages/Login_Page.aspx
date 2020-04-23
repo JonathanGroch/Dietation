@@ -26,7 +26,7 @@
                     <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
                 </div>
                 <div class="row">
-                    <asp:Button ID="btnLogin" runat="server" Text="Log In" />
+                    <asp:Button ID="btnLogin" runat="server" Text="Log In" OnClick="btnLogin_Click" />
                 </div>
                 <div class="row">
                     <asp:LinkButton ID="lbnForgot" runat="server">Forgot Password?</asp:LinkButton><asp:LinkButton ID="lbnNotRegistered" runat="server">Not Registered?</asp:LinkButton>

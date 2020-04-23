@@ -10,7 +10,7 @@
 namespace Front_End.Pages {
     
     
-    public partial class Registration {
+    public partial class Register {
         
         /// <summary>
         /// form1 control.

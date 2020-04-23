@@ -32,35 +32,36 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
+                    <asp:Label ID="lblFilterLabel" runat="server" Text="Enter Filter Title: "></asp:Label>
+
                     <asp:TextBox ID="txtFilterTitle" runat="server" Columns="32"></asp:TextBox>
 
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    <asp:Label ID="lblFilterLabel" runat="server" Text="Enter Filter Title"></asp:Label>
+                    &nbsp;<asp:Button ID="btnRenameTitle" runat="server" OnClick="btnRenameTitle_Click" Text="Rename Title" />
 
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
+                    <asp:Label ID="Label1" runat="server" Text="Enter Ingredient: "></asp:Label>
                     <asp:TextBox ID="txtSearchIngredient" runat="server" Columns="32"></asp:TextBox>
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
-                    <asp:Button ID="btnAddIngredient" runat="server" Text="Add Ingredient" />
+                    <asp:Button ID="btnAddIngredient" runat="server" Text="Add Ingredient" OnClick="btnAddIngredient_Click" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
-                    <asp:Button ID="btnMoveUp" runat="server" Text="Select Up" />
-                    <asp:Button ID="btnMoveDown" runat="server" Text="Select Down" />
-                    <asp:Button ID="btnRemoveItem" runat="server" Text="Remove Selected Item" />
-                    <asp:Button ID="btnClearList" runat="server" Text="Clear List" />
+                    <asp:Button ID="btnRemoveItem" runat="server" Text="Remove Selected Item" OnClick="btnRemoveItem_Click" />
+                    <asp:Button ID="btnClearList" runat="server" Text="Clear List" OnClick="btnClearList_Click" />
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
                  <h3>Banned Ingredients on 
                      <asp:Label ID="lblFilterTitle" runat="server"></asp:Label>
                  </h3>
-                 <asp:ListBox ID="lbxViewableFilterList" runat="server"></asp:ListBox>
+                 <asp:ListBox ID="lbxViewableFilterList" runat="server" OnSelectedIndexChanged="lbxViewableFilterList_SelectedIndexChanged"></asp:ListBox>
                 </div>
             </div>
             <div class="row">
@@ -71,7 +72,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    <asp:Button ID="btnClearFilter" runat="server" Text="Clear Filter" />
+                    <asp:Button ID="btnClearFilter" runat="server" Text="Clear Filter" OnClick="btnClearFilter_Click" />
 
                 </div>
             </div>

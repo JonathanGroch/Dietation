@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="Front_End.Pages.Registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Front_End.Pages.Register" %>
 
 <!DOCTYPE html>
 
@@ -35,7 +35,7 @@
                     <asp:TextBox ID="txtRegisterPassword" runat="server"></asp:TextBox>
                 </div>
                 <div class="row">
-                    <asp:Button ID="btnRegister" runat="server" Text="Register" />
+                    <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
                 </div>
             </div>
         </div>
