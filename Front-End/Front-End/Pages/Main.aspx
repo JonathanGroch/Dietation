@@ -12,10 +12,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-lg-4 col-sm-12">
-                <img src="" alt="Banner of Dietation" />
+                <img src="../Images/3226_Dietation_RB-01.png" />
             </div>
             <div class="col-md-8 col-sm-12">
-                <h1>Dietation</h1>
                 <div class="banner_desc">
                     <p>Dietation is a web/mobile application that helps you find food products that are 
                        with in your dietary or lifestyle restrictions. Be that gluten free, nut free, vegan, 

@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Images\3226_Dietation_RB-01.png" />
+    <Content Include="Images\option-02.png" />
     <Content Include="Pages\Main.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
