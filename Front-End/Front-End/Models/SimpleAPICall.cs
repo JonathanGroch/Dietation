@@ -9,6 +9,16 @@ namespace APICaller
 {
     class SimpleAPIClass
     {
+        private List<FDAFoodInfo> foodInfo;
+        public SimpleAPIClass(string searchTerm)
+        {
+            this.foodInfo = SearchFDADatabase(searchTerm);
+        }
+
+        public List<FDAFoodInfo> getFoodInfo()
+        {
+            return foodInfo;
+        }
         //Function that takes in a string for the food to be searched from FDA Database
         //Returns a list of FDAFoodInfo that has a food item's Name, fdcID and list of ingredients as strings
         public static List<FDAFoodInfo> SearchFDADatabase(string foodSearchName)

@@ -18,5 +18,15 @@ namespace Front_End
         {
 
         }
+
+        protected void lbnForgot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lbnNotRegistered_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

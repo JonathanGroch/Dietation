@@ -29,7 +29,7 @@
                     <asp:Button ID="btnLogin" runat="server" Text="Log In" OnClick="btnLogin_Click" />
                 </div>
                 <div class="row">
-                    <asp:LinkButton ID="lbnForgot" runat="server">Forgot Password?</asp:LinkButton><asp:LinkButton ID="lbnNotRegistered" runat="server">Not Registered?</asp:LinkButton>
+                    <asp:LinkButton ID="lbnForgot" runat="server" OnClick="lbnForgot_Click">Forgot Password?</asp:LinkButton><asp:LinkButton ID="lbnNotRegistered" runat="server" OnClick="lbnNotRegistered_Click">Not Registered?</asp:LinkButton>
                 </div>
             </div>
         </div>

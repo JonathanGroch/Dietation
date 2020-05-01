@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using APICaller;
 
 namespace Front_End.Pages
 {
@@ -16,7 +13,9 @@ namespace Front_End.Pages
 
         protected void btnSearchButton_Click(object sender, EventArgs e)
         {
-
+            string searchTerm = txtSearchBox.Text;
+            SimpleAPIClass call = new SimpleAPIClass(searchTerm);
+            
         }
 
         protected void btnCreateCustom_Click(object sender, EventArgs e)
