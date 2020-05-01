@@ -22,6 +22,24 @@ namespace Front_End.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlForm main_search;
         
         /// <summary>
+        /// btnLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogin;
+        
+        /// <summary>
+        /// btnCreateCustom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCreateCustom;
+        
+        /// <summary>
         /// txtSearchBox control.
         /// </summary>
         /// <remarks>
@@ -38,15 +56,6 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearchButton;
-        
-        /// <summary>
-        /// btnCreateCustom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreateCustom;
         
         /// <summary>
         /// chbGlutenFree control.

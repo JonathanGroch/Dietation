@@ -69,10 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Content\Dietation.css" />
     <Content Include="Images\3226_Dietation_RB-01.png" />
     <Content Include="Images\option-02.png" />
     <Content Include="Pages\Main.aspx" />
+    <Content Include="Pages\NegativeResult.aspx" />
+    <Content Include="Pages\PositiveResult.aspx" />
     <Content Include="Pages\Register.aspx" />
+    <Content Include="Pages\UnknownResult.aspx" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <None Include="Web.Debug.config">
@@ -231,12 +235,33 @@
     <Compile Include="Pages\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NegativeResult.aspx.cs">
+      <DependentUpon>NegativeResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NegativeResult.aspx.designer.cs">
+      <DependentUpon>NegativeResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PositiveResult.aspx.cs">
+      <DependentUpon>PositiveResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PositiveResult.aspx.designer.cs">
+      <DependentUpon>PositiveResult.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UnknownResult.aspx.cs">
+      <DependentUpon>UnknownResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UnknownResult.aspx.designer.cs">
+      <DependentUpon>UnknownResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\User_Information_Page.aspx.cs">

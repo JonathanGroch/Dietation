@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/Dietation.css" rel="stylesheet" />
 </head>
 <body>
 <div class="banner_block">
