@@ -16,7 +16,8 @@ namespace Front_End
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
         }
 
         protected void lbnForgot_Click(object sender, EventArgs e)

@@ -14,13 +14,18 @@ namespace Front_End.Pages
         protected void btnSearchButton_Click(object sender, EventArgs e)
         {
             string searchTerm = txtSearchBox.Text;
-            SimpleAPIClass call = new SimpleAPIClass(searchTerm);
+            List<FDAFoodInfo> info = new SimpleAPIClass(searchTerm).getFoodInfo();
             
         }
 
         protected void btnCreateCustom_Click(object sender, EventArgs e)
         {
             Response.Redirect("Custom_Filter.aspx");
+        }
+
+        protected void btnFiltersList_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FilterInformation.aspx");
         }
     }
 }

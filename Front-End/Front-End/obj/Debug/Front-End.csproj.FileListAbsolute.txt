@@ -114,3 +114,4 @@ D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.csproj.CopyComple
 D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.dll
 D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.pdb
 D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.csprojResolveAssemblyReference.cache
+D:\Dietation\Dietation\Front-End\Front-End\bin\Newtonsoft.Json.dll

@@ -73,7 +73,10 @@
     <None Include="packages.config" />
     <Content Include="Content\Dietation.css" />
     <Content Include="Images\3226_Dietation_RB-01.png" />
+    <Content Include="Images\iconmonstr-thumb-10-240.png" />
+    <Content Include="Images\iconmonstr-thumb-6-240.png" />
     <Content Include="Images\option-02.png" />
+    <Content Include="Pages\FilterInformation.aspx" />
     <Content Include="Pages\Main.aspx" />
     <Content Include="Pages\NegativeResult.aspx" />
     <Content Include="Pages\PositiveResult.aspx" />
@@ -213,6 +216,7 @@
   <ItemGroup>
     <Compile Include="Models\FDAFoodInfo.cs" />
     <Compile Include="Models\jsonFoodList.cs" />
+    <Compile Include="Models\PredefinedFilters.cs" />
     <Compile Include="Models\SimpleAPICall.cs" />
     <Compile Include="Models\Encryption.cs" />
     <Compile Include="Models\User.cs" />
@@ -225,6 +229,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FilterInformation.aspx.cs">
+      <DependentUpon>FilterInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FilterInformation.aspx.designer.cs">
+      <DependentUpon>FilterInformation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login_Page.aspx.cs">
       <DependentUpon>Login_Page.aspx</DependentUpon>
