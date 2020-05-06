@@ -50,11 +50,11 @@
         </div>
         <div class="row">
             <div class="col">
-                <h3>Follow us at these Links.</h3>'<asp:ImageButton ID="ImageButton1" runat="server" />
-                <asp:ImageButton ID="ImageButton2" runat="server" />
-                <asp:ImageButton ID="ImageButton3" runat="server" />
-                <asp:ImageButton ID="ImageButton4" runat="server" />
-
+                <h3>Follow us at these Links.</h3>
+                <asp:ImageButton ID="ibnFacebook" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-facebook-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnYoutube" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-youtube-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnInstagram" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-instagram-13-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnSnapchat" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-snapchat-3-240.png" CausesValidation="False" ImageAlign="Left" />
             </div>
             <div class="col">
                 <h3>Have a question? Contact us here.</h3>

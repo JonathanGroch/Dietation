@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Front_End.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -51,6 +52,27 @@ namespace Front_End
         protected void lbxViewableFilterList_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbxIndex = lbxViewableFilterList.SelectedIndex;
+        }
+
+        protected void ctnSaveFilter_Click(object sender, EventArgs e)
+        {
+            if(Session["CustomerFilter1"] == null)
+            {
+                CustomFilter cf1 = new CustomFilter(txtFilterTitle.Text, lbxViewableFilterList.Items.Cast<String>().ToList());
+                Session["CustomFilter1"] = cf1;
+            }
+            else if(Session["CustomerFilter2"] == null)
+            {
+                CustomFilter cf2 = new CustomFilter(txtFilterTitle.Text, lbxViewableFilterList.Items.Cast<String>().ToList());
+                Session["CustomFilter2"] = cf2;
+            }
+            else if(Session["CustomerFilter3"] == null)
+            {
+                CustomFilter cf3 = new CustomFilter(txtFilterTitle.Text, lbxViewableFilterList.Items.Cast<String>().ToList());
+                Session["CustomFilter3"] = cf3;
+            }
+            Response.Redirect("Main.aspx");
+
         }
     }
 }

@@ -73,8 +73,12 @@
     <None Include="packages.config" />
     <Content Include="Content\Dietation.css" />
     <Content Include="Images\3226_Dietation_RB-01.png" />
+    <Content Include="Images\iconmonstr-facebook-3-240.png" />
+    <Content Include="Images\iconmonstr-instagram-13-240.png" />
+    <Content Include="Images\iconmonstr-snapchat-3-240.png" />
     <Content Include="Images\iconmonstr-thumb-10-240.png" />
     <Content Include="Images\iconmonstr-thumb-6-240.png" />
+    <Content Include="Images\iconmonstr-youtube-3-240.png" />
     <Content Include="Images\option-02.png" />
     <Content Include="Pages\FilterInformation.aspx" />
     <Content Include="Pages\Main.aspx" />
@@ -214,6 +218,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CustomFilter.cs" />
     <Compile Include="Models\FDAFoodInfo.cs" />
     <Compile Include="Models\jsonFoodList.cs" />
     <Compile Include="Models\PredefinedFilters.cs" />

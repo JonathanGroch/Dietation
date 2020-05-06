@@ -9,27 +9,18 @@
     <link href="../Content/Dietation.css" rel="stylesheet" />
 </head>
 <body>
-<div class="banner_block">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-lg-4 col-sm-12">
-                <img src="" alt="Banner of Dietation" />
-            </div>
-            <div class="col-md-8 col-sm-12">
-                <h1>Dietation</h1>
+<div class="create_filter_block">
+    <form id="main_filter" runat="server">
+        <div class="container">
+            <div class="row">
+            <img class="banner_img" src="../Images/3226_Dietation_RB-01.png" />
+            <br />
                 <div class="banner_desc">
                     <p>Here at Dietation we understand that sometimes you can't trust always pre-defined filters, or want to filter particular ingredients,
                         thus why we present you Dietation Custom filter. 
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<hr />
-<div class="create_filter_block">
-    <form id="main_filter" runat="server">
-        <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
@@ -40,7 +31,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    &nbsp;<asp:Button ID="btnRenameTitle" runat="server" OnClick="btnRenameTitle_Click" Text="Rename Title" />
+                    &nbsp;<asp:Button ID="btnRenameTitle" runat="server" OnClick="btnRenameTitle_Click" Text="Rename Title" CssClass="dietation-btn" />
 
                 </div>
             </div>
@@ -50,13 +41,13 @@
                     <asp:TextBox ID="txtSearchIngredient" runat="server" Columns="32"></asp:TextBox>
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
-                    <asp:Button ID="btnAddIngredient" runat="server" Text="Add Ingredient" OnClick="btnAddIngredient_Click" />
+                    <asp:Button ID="btnAddIngredient" runat="server" Text="Add Ingredient" OnClick="btnAddIngredient_Click" CssClass="dietation-btn" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
-                    <asp:Button ID="btnRemoveItem" runat="server" Text="Remove Selected Item" OnClick="btnRemoveItem_Click" />
-                    <asp:Button ID="btnClearList" runat="server" Text="Clear List" OnClick="btnClearList_Click" />
+                    <asp:Button ID="btnRemoveItem" runat="server" Text="Remove Selected Item" OnClick="btnRemoveItem_Click" CssClass="dietation-btn" />
+                    <asp:Button ID="btnClearList" runat="server" Text="Clear List" OnClick="btnClearList_Click" CssClass="dietation-btn" />
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
                  <h3>Banned Ingredients on 
@@ -68,24 +59,30 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    <asp:Button ID="ctnSaveFilter" runat="server" Text="Save Filter" />
+                    <asp:Button ID="ctnSaveFilter" runat="server" Text="Save Filter" CssClass="dietation-btn" OnClick="ctnSaveFilter_Click" />
 
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    <asp:Button ID="btnClearFilter" runat="server" Text="Clear Filter" OnClick="btnClearFilter_Click" />
+                    <asp:Button ID="btnClearFilter" runat="server" Text="Clear Filter" OnClick="btnClearFilter_Click" CssClass="dietation-btn" />
 
                 </div>
             </div>
+            <div class="row">
+            <div class="col">
+                <h3>Follow us at these Links.</h3>
+                <asp:ImageButton ID="ibnFacebook" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-facebook-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnYoutube" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-youtube-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnInstagram" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-instagram-13-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnSnapchat" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-snapchat-3-240.png" CausesValidation="False" ImageAlign="Left" />
+            </div>
+            <div class="col">
+                <h3>Have a question? Contact us here.</h3>
+                <a>Support@Dietation.com</a>
+            </div>
+        </div>
         </div>
     </form>
-</div>
-<div class="footer">
-    <div class="container">
-        <div class="row">
-
-        </div>
-    </div>
 </div>
 </body>
 </html>

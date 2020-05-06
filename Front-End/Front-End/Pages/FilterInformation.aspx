@@ -14,11 +14,12 @@
     <div class="container">
         <div class="row">
             <img class="banner_img" src="../Images/3226_Dietation_RB-01.png" />
-            <div class="banner_desc">
-                <p>Dietation understands that you can't always take the predefined filters at there word. We've been there. So to ensure peace of mind, 
+            <br />
+                <div class="banner_desc">
+                    <p>Dietation understands that you can't always take the predefined filters at there word. We've been there. So to ensure peace of mind, 
                     this page allows you scrolls through all the ingredients of each filter. 
-                </p>
-            </div>
+                    </p>
+                </div>
         </div>
         <div class="row">
             <div class="col">
@@ -50,6 +51,19 @@
                     Iusto recteque eam ut, pri quot maiorum eleifend an. Ne mei habemus blandit periculis.</p>
                 <p>Et volutpat liberavisse sea. Duo ei adipiscing liberavisse, sea nostrum invenire cu, tation 
                     platonem rationibus ne sit. Sumo nostrum suavitate has ei. Pri delectus voluptatum ad.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h3>Follow us at these Links.</h3>
+                <asp:ImageButton ID="ibnFacebook" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-facebook-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnYoutube" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-youtube-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnInstagram" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-instagram-13-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnSnapchat" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-snapchat-3-240.png" CausesValidation="False" ImageAlign="Left" />
+            </div>
+            <div class="col">
+                <h3>Have a question? Contact us here.</h3>
+                <a>Support@Dietation.com</a>
             </div>
         </div>
     </div>

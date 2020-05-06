@@ -157,39 +157,39 @@ namespace Front_End.Pages {
         protected global::System.Web.UI.WebControls.CheckBox chbCustom3;
         
         /// <summary>
-        /// ibnYoutubeLink control.
+        /// ibnFacebook control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibnYoutubeLink;
+        protected global::System.Web.UI.WebControls.ImageButton ibnFacebook;
         
         /// <summary>
-        /// ibnFacebookLink control.
+        /// ibnYoutube control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibnFacebookLink;
+        protected global::System.Web.UI.WebControls.ImageButton ibnYoutube;
         
         /// <summary>
-        /// ibnSnapchattLink control.
+        /// ibnInstagram control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibnSnapchattLink;
+        protected global::System.Web.UI.WebControls.ImageButton ibnInstagram;
         
         /// <summary>
-        /// ibnInstagramLink control.
+        /// ibnSnapchat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ibnInstagramLink;
+        protected global::System.Web.UI.WebControls.ImageButton ibnSnapchat;
     }
 }
