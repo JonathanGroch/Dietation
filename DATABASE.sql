@@ -8,8 +8,8 @@ create table if not exists Users (
 	UserID int not null auto_increment,
     FirstName varchar(255) not null,
     LastName varchar(255),
-    AuthenticationMethod varchar(255),
     LoginID varchar(255),
+    userPassword varchar(255),
     EmailAddress varchar(255) not null,
     Primary key (UserID)
 );
@@ -39,7 +39,12 @@ create table if not exists UserHistory (
 	foreign key(FoodID)
 		references Foodfilter(FoodID)
 );
-    
 
+create table if not exists ingredients (
+	ingredientID int not null auto_increment,
+    foodName varchar (255) not null,
+    ingredient varchar(255) not null,
+    primary key (ingredientID)
+);
 
 
