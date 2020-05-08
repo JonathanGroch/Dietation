@@ -13,7 +13,11 @@
     <div class="container">
         <form id="main_search" runat="server">
         <div class="row">
-            <asp:Button ID="btnLogin" runat="server" CssClass="dietation-btn" Text="Login" />
+            <asp:Button ID="btnLogin" runat="server" CssClass="dietation-btn" Text="Login" OnClick="btnLogin_Click" />
+            <asp:Panel ID="pnlLogin" runat="server" Visible="False">
+                <asp:Label ID="lblUsername" runat="server"></asp:Label>
+                <asp:LinkButton ID="lnbSignOut" runat="server" OnClick="lnbSignOut_Click">Sign out</asp:LinkButton>
+            </asp:Panel>
         </div>
         <div class="row">
             <img class="banner_img" src="../Images/3226_Dietation_RB-01.png" />
@@ -55,10 +59,10 @@
         <div class="row">
             <div class="col">
                 <h3>Follow us at these Links.</h3>
-                <asp:ImageButton ID="ibnFacebook" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-facebook-3-240.png" CausesValidation="False" ImageAlign="Left" />
-                <asp:ImageButton ID="ibnYoutube" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-youtube-3-240.png" CausesValidation="False" ImageAlign="Left" />
-                <asp:ImageButton ID="ibnInstagram" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-instagram-13-240.png" CausesValidation="False" ImageAlign="Left" />
-                <asp:ImageButton ID="ibnSnapchat" runat="server" CssClass="dietation-link" ImageUrl="~/Images/iconmonstr-snapchat-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnFacebook" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-facebook-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnYoutube" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-youtube-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnInstagram" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-instagram-13-240.png" CausesValidation="False" ImageAlign="Left" />
+                <asp:ImageButton ID="ibnSnapchat" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-snapchat-3-240.png" CausesValidation="False" ImageAlign="Left" />
             </div>
             <div class="col">
                 <h3>Have a question? Contact us here.</h3>

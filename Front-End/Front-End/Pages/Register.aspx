@@ -29,12 +29,6 @@
                 <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
         </div> 
         <div class="row">
-                <p>Username</p>
-        </div>
-        <div class="row">
-                <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
-        </div> 
-        <div class="row">
              <p>Your Email</p>
          </div>
          <div class="row">
@@ -44,10 +38,17 @@
              <p>Password</p>
          </div>
          <div class="row">
-             <asp:TextBox ID="txtRegisterPassword" runat="server"></asp:TextBox>
+             <asp:TextBox ID="txtRegisterPassword" runat="server" TextMode="Password"></asp:TextBox>
          </div>
          <div class="row">
-             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
+             <p>Confirm Password</p>
+         </div>
+         <div class="row">
+             <asp:TextBox ID="txtRegisterPassword2" runat="server" TextMode="Password"></asp:TextBox>
+         </div>
+         <div class="row">
+             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="dietation-btn" />
+             <asp:Label ID="lblErrorMsg" runat="server"></asp:Label>
          </div>
     </div>
 </div>

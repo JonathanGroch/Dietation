@@ -42,15 +42,6 @@ namespace Front_End.Pages
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
 
         /// <summary>
-        /// txtUsername control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
-
-        /// <summary>
         /// txtRegisterEmail control.
         /// </summary>
         /// <remarks>
@@ -69,6 +60,15 @@ namespace Front_End.Pages
         protected global::System.Web.UI.WebControls.TextBox txtRegisterPassword;
 
         /// <summary>
+        /// txtRegisterPassword2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRegisterPassword2;
+
+        /// <summary>
         /// btnRegister control.
         /// </summary>
         /// <remarks>
@@ -76,5 +76,14 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegister;
+
+        /// <summary>
+        /// lblErrorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorMsg;
     }
 }

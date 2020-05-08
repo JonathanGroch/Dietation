@@ -11,7 +11,12 @@ namespace Front_End.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["LoginId"] != null)
+            {
+                lblUsername.Text = (string)Session["LoginName"];
+                btnLogin.Visible = false;
+                pnlLogin.Visible = true;
+            }
         }
 
         protected void btnSearchButton_Click(object sender, EventArgs e)
@@ -89,12 +94,32 @@ namespace Front_End.Pages
 
         protected void btnCreateCustom_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Custom_Filter.aspx");
+            if(Session["LoginId"] != null)
+            {
+                Response.Redirect("Custom_Filter.aspx");
+            }
+            else
+            {
+                Response.Redirect("Login_Page.aspx");
+            }
+
         }
 
         protected void btnFiltersList_Click(object sender, EventArgs e)
         {
             Response.Redirect("FilterInformation.aspx");
+        }
+
+        protected void lnbSignOut_Click(object sender, EventArgs e)
+        {
+            Session["LoginId"] = null;
+            btnLogin.Visible = true;
+            pnlLogin.Visible = false;
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login_Page.aspx");
         }
     }
 }

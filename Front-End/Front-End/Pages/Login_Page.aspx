@@ -21,6 +21,7 @@
                 <asp:TextBox ID="txtPassword" placeholder="Enter password here... " runat="server"></asp:TextBox>
                 <br />
                 <asp:Button ID="btnLogin" runat="server" Text="Log In" OnClick="btnLogin_Click" CssClass="dietation-btn" />
+                <asp:Label ID="lblErrorMsg" runat="server"></asp:Label>
                 <br />
                 <asp:LinkButton ID="lbnForgot" runat="server" OnClick="lbnForgot_Click" CssClass="dietation-lnk">Forgot Password?</asp:LinkButton><asp:LinkButton ID="lbnNotRegistered" runat="server" OnClick="lbnNotRegistered_Click" CssClass="dietation-lnk">Not Registered?</asp:LinkButton>
             </div>

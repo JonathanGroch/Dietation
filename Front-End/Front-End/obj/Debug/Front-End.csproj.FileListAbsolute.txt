@@ -174,7 +174,6 @@ D:\Dietation\Dietation-master\Front-End\Front-End\obj\Debug\Front-End.dll
 D:\Dietation\Dietation-master\Front-End\Front-End\obj\Debug\Front-End.pdb
 D:\Dietation\Dietation\Front-End\Front-End\obj\Debug\Front-End.csprojAssemblyReference.cache
 D:\Dietation\Front-End\Front-End\bin\Newtonsoft.Json.dll
-D:\Dietation\Front-End\Front-End\obj\Debug\Front-End.csprojAssemblyReference.cache
 D:\Dietation\Front-End\Front-End\bin\MySql.Data.dll
 D:\Dietation\Front-End\Front-End\bin\Google.Protobuf.dll
 D:\Dietation\Front-End\Front-End\bin\Zstandard.Net.dll
@@ -189,3 +188,4 @@ D:\Dietation\Front-End\Front-End\bin\System.Memory.dll
 D:\Dietation\Front-End\Front-End\bin\System.Runtime.CompilerServices.Unsafe.dll
 D:\Dietation\Front-End\Front-End\bin\System.Numerics.Vectors.dll
 D:\Dietation\Front-End\Front-End\bin\MySql.Data.xml
+D:\Dietation\Front-End\Front-End\obj\Debug\Front-End.csprojAssemblyReference.cache
