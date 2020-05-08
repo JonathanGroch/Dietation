@@ -6,37 +6,45 @@ namespace Front_End.Objects
 {
     public class User
     {
-        private string emailAddress;
-        private string loginId;
-        private string firstName;
-        private string lastName;
-        private string pass;
-        private string plaintext = "Laziness Granite Praetor";
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
 
-        public User(string emailAddress)
+        private String emailAddress;
+        private String loginId;
+        private String firstName;
+        private String lastName;
+        private String pass;
+        private static Random random = new Random();
+
+
+        public User(String emailAddress)
         {
             this.emailAddress = emailAddress;
         }
 
-        public User(string emailAddress, string firstName, string loginId, string pass, string lastName)
+        public User(String emailAddress, String firstName, String pass, String lastName)
         {
             this.emailAddress = emailAddress;
             this.firstName = firstName;
-            this.loginId = loginId;
             this.lastName = lastName;
-            this.pass = Encrypt.EncryptString(plaintext, pass);
+            this.loginId = RandomString(16);
+            this.pass = Encrypt.EncryptString(loginId, pass);
         }
 
-        public string sqlInsertInto()
+        public String sqlInsertInto()
         {
             return "insert into users(FirstName, LastName, LoginID, userPassword, EmailAddress)" +
                 "values('" + firstName + "', '" + lastName + "', '" + loginId + "', '" + pass + "', '" + emailAddress + "')";
         }
 
-        public bool comparatorPassword(string enteredPass, string encryptedPass)
+        public bool comparatorPassword(String encryptedPass, String enteredPass, string logid)
         {
-            string temp = Encrypt.DecryptString(plaintext, encryptedPass);
-            if(enteredPass == temp)
+            string temp = Encrypt.DecryptString(encryptedPass, enteredPass);
+            if(logid == temp)
             {
                 return true;
             }
@@ -44,6 +52,11 @@ namespace Front_End.Objects
             {
                 return false;
             }
+        }
+
+        public string getLoginId()
+        {
+            return loginId;
         }
 
     }

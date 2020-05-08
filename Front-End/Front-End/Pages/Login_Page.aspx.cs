@@ -21,12 +21,12 @@ namespace Front_End
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string email = txtUsername.Text;
-            string password = txtPassword.Text;
+            String email = txtUsername.Text;
+            String password = txtPassword.Text;
             
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
             mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
-            string sqlString = "select userPassword, LoginID from users where EmailAddress='" + email + "'";
+            String sqlString = "select userPassword, LoginID, FirstName, LastName from users where EmailAddress='" + email + "'";
             try
             {
                 mysqlConnection.Open();
@@ -35,15 +35,12 @@ namespace Front_End
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 if(rdr.HasRows)
                 {
+                    rdr.ReadAsync();
                     User u = new User(email);
-                    if (u.comparatorPassword(password, rdr[0].ToString()))
+                    if (u.comparatorPassword(rdr.GetValue(0).ToString(), password, rdr.GetValue(1).ToString()))
                     {
-                        Response.Redirect("Main.aspx");
-                        Session["LoginId"] = rdr[1].ToString();
-                        string sqlString2 = "select FirstName, LastName from user where EmailAddress=" + email;
-                        MySqlCommand cmd2 = new MySqlCommand(sqlString, mysqlConnection);
-                        MySqlDataReader rdr2 = cmd2.ExecuteReader();
-                        Session["LoginName"] = rdr2[0].ToString() + " " + rdr2[1].ToString();
+                        Session["LoginId"] = rdr.GetValue(1).ToString();
+                        Session["LoginName"] = rdr.GetValue(2).ToString() + " " + rdr.GetValue(3).ToString();
                         Response.Redirect("Main.aspx");
                     }
                     else

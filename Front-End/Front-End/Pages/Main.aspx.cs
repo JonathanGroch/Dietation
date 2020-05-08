@@ -58,6 +58,7 @@ namespace Front_End.Pages
                 }
                 else if(rdr.HasRows)
                 {
+                    rdr.Read();
                     Session["ProductName"] = rdr[selected[0]];
                     foreach (string s in selected)
                     {
@@ -113,6 +114,7 @@ namespace Front_End.Pages
         protected void lnbSignOut_Click(object sender, EventArgs e)
         {
             Session["LoginId"] = null;
+            Session["LoginName"] = null;
             btnLogin.Visible = true;
             pnlLogin.Visible = false;
         }
