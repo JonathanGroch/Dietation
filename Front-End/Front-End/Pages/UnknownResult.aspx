@@ -11,6 +11,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <p>Unknown error has occured. Please contact at us at blah blah </p>
         </div>
     </form>
 </body>

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Front_End.Pages {
-    
-    
-    public partial class Register {
-        
+namespace Front_End.Pages
+{
+
+
+    public partial class Register
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-        
+
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -38,7 +40,16 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-        
+
+        /// <summary>
+        /// txtUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUsername;
+
         /// <summary>
         /// txtRegisterEmail control.
         /// </summary>
@@ -47,7 +58,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRegisterEmail;
-        
+
         /// <summary>
         /// txtRegisterPassword control.
         /// </summary>
@@ -56,7 +67,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRegisterPassword;
-        
+
         /// <summary>
         /// btnRegister control.
         /// </summary>

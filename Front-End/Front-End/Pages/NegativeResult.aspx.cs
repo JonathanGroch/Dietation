@@ -11,7 +11,12 @@ namespace Front_End.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblResultFood.Text = Session["ProductName"].ToString();
+        }
 
+        protected void btnReturnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Main.aspx");
         }
     }
 }

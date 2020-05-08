@@ -16,7 +16,7 @@
                 <br />
                 <p><asp:Label ID="lblResultFood" runat="server"></asp:Label> is compatible with your diet!</p>
                 <br />
-                <asp:Button ID="btnReturnHome" runat="server" CssClass="dietation-btn" Text="Return" />
+                <asp:Button ID="btnReturnHome" runat="server" CssClass="dietation-btn" Text="Return" OnClick="btnReturnHome_Click" />
             </div>
         </div>
     </form>

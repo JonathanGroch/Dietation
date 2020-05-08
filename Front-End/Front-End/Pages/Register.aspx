@@ -29,6 +29,12 @@
                 <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
         </div> 
         <div class="row">
+                <p>Username</p>
+        </div>
+        <div class="row">
+                <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+        </div> 
+        <div class="row">
              <p>Your Email</p>
          </div>
          <div class="row">

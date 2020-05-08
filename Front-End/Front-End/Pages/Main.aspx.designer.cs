@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Front_End.Pages {
-    
-    
-    public partial class Main {
-        
+namespace Front_End.Pages
+{
+
+
+    public partial class Main
+    {
+
         /// <summary>
         /// main_search control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm main_search;
-        
+
         /// <summary>
         /// btnLogin control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
-        
+
         /// <summary>
         /// txtSearchBox control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSearchBox;
-        
+
         /// <summary>
         /// btnSearchButton control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearchButton;
-        
+
         /// <summary>
         /// btnCreateCustom control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreateCustom;
-        
+
         /// <summary>
         /// btnFiltersList control.
         /// </summary>
@@ -65,97 +67,16 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnFiltersList;
-        
+
         /// <summary>
-        /// chbGlutenFree control.
+        /// cblFilters control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbGlutenFree;
-        
-        /// <summary>
-        /// chbDairyFree control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbDairyFree;
-        
-        /// <summary>
-        /// chbNutFree control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbNutFree;
-        
-        /// <summary>
-        /// chbCornFree control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbCornFree;
-        
-        /// <summary>
-        /// chbVegan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbVegan;
-        
-        /// <summary>
-        /// chbVegetarian control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbVegetarian;
-        
-        /// <summary>
-        /// chbPescatarian control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbPescatarian;
-        
-        /// <summary>
-        /// chbCustom1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbCustom1;
-        
-        /// <summary>
-        /// chbCustom2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbCustom2;
-        
-        /// <summary>
-        /// chbCustom3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chbCustom3;
-        
+        protected global::System.Web.UI.WebControls.CheckBoxList cblFilters;
+
         /// <summary>
         /// ibnFacebook control.
         /// </summary>
@@ -164,7 +85,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnFacebook;
-        
+
         /// <summary>
         /// ibnYoutube control.
         /// </summary>
@@ -173,7 +94,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnYoutube;
-        
+
         /// <summary>
         /// ibnInstagram control.
         /// </summary>
@@ -182,7 +103,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnInstagram;
-        
+
         /// <summary>
         /// ibnSnapchat control.
         /// </summary>

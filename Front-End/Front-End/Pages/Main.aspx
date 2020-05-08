@@ -26,6 +26,7 @@
                     </p>
                 </div>
         </div>
+            <hr />
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <asp:TextBox ID="txtSearchBox" runat="server" Font-Italic="True" placeholder="Search the product here..." Columns="64"></asp:TextBox>
@@ -37,17 +38,20 @@
             </div>
         </div>
         <div class="row">
-                <asp:CheckBox ID="chbGlutenFree" runat="server" Text="Gluten-Free" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbDairyFree" runat="server" Text="Dairy Free" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbNutFree" runat="server" Text="Nut Free" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbCornFree" runat="server" Text="Corn Free" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbVegan" runat="server" Text="Vegan" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbVegetarian" runat="server" Text="Vegetarian" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbPescatarian" runat="server" Text="Pescatarian" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbCustom1" runat="server" Text="Custom_Filter_1" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbCustom2" runat="server" Text="Custom_Filter_2" CssClass="dietation-checkbox" />
-                <asp:CheckBox ID="chbCustom3" runat="server" Text="Custom_Filter_3" CssClass="dietation-checkbox" />
+                <asp:CheckBoxList ID="cblFilters" runat="server" CssClass="dietation-checkbox">
+                    <asp:ListItem Value="GlutenFree">Gluten Free</asp:ListItem>
+                    <asp:ListItem Value="DairyFree">Dairy Free</asp:ListItem>
+                    <asp:ListItem Value="NutFree">Nut Free</asp:ListItem>
+                    <asp:ListItem Value="CornFree">Corn Free</asp:ListItem>
+                    <asp:ListItem Value="Vegan">Vegan</asp:ListItem>
+                    <asp:ListItem Value="Vegetarian">Vegetarian</asp:ListItem>
+                    <asp:ListItem Value="Pescatarian">Pescatarian</asp:ListItem>
+                    <asp:ListItem Value="0">Custom Filter 1</asp:ListItem>
+                    <asp:ListItem Value="1">Custom Filter 2</asp:ListItem>
+                    <asp:ListItem Value="2">Custom Filter 3</asp:ListItem>
+                </asp:CheckBoxList>
         </div>
+            <hr />
         <div class="row">
             <div class="col">
                 <h3>Follow us at these Links.</h3>
