@@ -50,7 +50,14 @@ namespace APICaller
                 //Containing the food's name and fdcID
                 foreach (var foodItem in FoodResults.foods)
                 {
-                    FoodList.Add(new FDAFoodInfo(foodItem.description, foodItem.fdcId));
+					//If the brandOwner is null, sets it to an empty string. Otherwise, sets the foodBrand FDAFoodInfo value to the brandOwner given
+                    if (foodItem.brandOwner == null)
+                    {
+                        FoodList.Add(new FDAFoodInfo(foodItem.description, foodItem.fdcId, ""));
+                    }
+                    else {
+                        FoodList.Add(new FDAFoodInfo(foodItem.description, foodItem.fdcId, foodItem.brandOwner));
+                    }
 
                     //Goes through each nutrient in the nutrient list and adds that to the current FDAFoodInfo's ingredient list
                     foreach (var nutrientItem in foodItem.foodNutrients)
@@ -61,6 +68,7 @@ namespace APICaller
                 return FoodList;
             }
         }
+		
         /*Main function to test the SearchFDADatabase function by printing to a console based on a foodSearch term
          * 
          * 
@@ -86,7 +94,8 @@ namespace APICaller
                 {
                     count = 0;
                     Console.WriteLine("ID: " + foodItem.foodID);
-                    Console.WriteLine("Name: " + foodItem.foodName + "\n");
+                    Console.WriteLine("Name: " + foodItem.foodName);
+					Console.WriteLine("Brand: " + foodItem.foodBrand + "\n");
                     Console.WriteLine("Ingredients List: ");
 
                     //Prints out information for each nutrient in the ingredients list

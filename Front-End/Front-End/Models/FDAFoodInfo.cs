@@ -6,6 +6,7 @@ namespace APICaller
     {
         public string foodName { get; set; }
         public int foodID { get; set; }
+		public string foodBrand { get; set; }
         public List<string> foodIngredients { get; set; }
 
         public FDAFoodInfo()
@@ -14,11 +15,12 @@ namespace APICaller
             foodIngredients = new List<string>();
         }
 
-        public FDAFoodInfo(string userFoodName, int userFoodID)
+        public FDAFoodInfo(string userFoodName, int userFoodID, string userFoodBrand)
         {
             foodName = userFoodName;
             foodIngredients = new List<string>();
             foodID = userFoodID;
+            foodBrand = userFoodBrand;
         }
 
         public FDAFoodInfo(List<string> userFoodIngredients)
