@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using APICaller;
+using Dietation_Test;
+using Front_End.Models;
 using MySql.Data.MySqlClient;
 
 namespace Front_End.Pages
@@ -22,6 +25,7 @@ namespace Front_End.Pages
         protected void btnSearchButton_Click(object sender, EventArgs e)
         {
             bool directionFlag = true;
+            bool customFlag = false;
             string searchTerm = txtSearchBox.Text;
             List<String> selected = new List<String>();
             foreach(ListItem item in cblFilters.Items)
@@ -29,6 +33,10 @@ namespace Front_End.Pages
                 if(item.Selected)
                 {
                     selected.Add(item.Value);
+                    if((item.Value).All(char.IsDigit))
+                    {
+                        customFlag = true;
+                    }
                 }
             }
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
@@ -37,47 +45,103 @@ namespace Front_End.Pages
             {
                 mysqlConnection.Open();
                 string selectedProduct =  "select FoodName, ";
+                
                 for(int i = 0; i < selected.Count; i++)
                 {
-                    if(i == selected.Count - 1)
+                    if(!customFlag)
                     {
-                        selectedProduct += selected[i] + " ";
+                        if (i == selected.Count - 1)
+                        {
+                            selectedProduct += selected[i] + " ";
+                        }
+                        else
+                        {
+                            selectedProduct += selected[i] + ", ";
+                        }
                     }
                     else
                     {
-                        selectedProduct += selected[i] + ", ";
+                        if((selected[i]).All(char.IsDigit))
+                        {
+                            selectedProduct.Substring(0, selectedProduct.Length - 2);
+                            break;
+                        }
+                        else if (i == selected.Count - 1)
+                        {
+                            selectedProduct += selected[i] + " ";
+                        }
+                        else
+                        {
+                            selectedProduct += selected[i] + ", ";
+                        }
                     }
+
                 }
                 selectedProduct += "from foodfilter where FoodName = \'" + searchTerm + "\'";
                 MySqlCommand cmd1 = new MySqlCommand(selectedProduct, mysqlConnection);
                 MySqlDataReader rdr = cmd1.ExecuteReader();
-                if(!rdr.HasRows)
+                if(!customFlag)
                 {
-                    List<FDAFoodInfo> info = new SimpleAPIClass(searchTerm).getFoodInfo();
-                    
-                }
-                else if(rdr.HasRows)
-                {
-                    rdr.Read();
-                    Session["ProductName"] = rdr[selected[0]];
-                    foreach (string s in selected)
+                    if (!rdr.HasRows)
                     {
-                        int flag = (int)rdr[s];
-                        if(flag == 0)
+                        List<FDAFoodInfo> info = new SimpleAPIClass(searchTerm).getFoodInfo();
+                        if(info == null)
                         {
-                            directionFlag = false;
-                            break;
+                            Response.Redirect("UnknownResult.aspx");
+                        }
+                        else
+                        {
+                            //Future Feature have a list of items for the customer to choose from when searching
+                            FDAFoodInfo principleFood = info.ElementAt(0);
+                            CompareListsSearching cls = new CompareListsSearching();
+                            PredefinedFilters preFilters = new PredefinedFilters();
+                            Session["ProductName"] = principleFood.foodName;
+                            foreach (string s in selected)
+                            {
+                                if (!cls.Compare(preFilters.getFilters(s), principleFood.foodIngredients))
+                                {
+                                    directionFlag = false;
+                                    break;
+                                }
+                            }
+                            if (directionFlag)
+                            {
+                                Response.Redirect("PositiveResult.aspx");
+
+                            }
+                            else
+                            {
+                                Response.Redirect("NegativeResult.aspx");
+                            }
                         }
                     }
-                    if(directionFlag)
+                    else if (rdr.HasRows)
                     {
-                        Response.Redirect("PositiveResult.aspx");
+                        rdr.Read();
+                        Session["ProductName"] = rdr[selected[0]];
+                        foreach (string s in selected)
+                        {
+                            int flag = (int)rdr[s];
+                            if (flag == 0)
+                            {
+                                directionFlag = false;
+                                break;
+                            }
+                        }
+                        if (directionFlag)
+                        {
+                            Response.Redirect("PositiveResult.aspx");
 
+                        }
+                        else
+                        {
+                            Response.Redirect("NegativeResult.aspx");
+                        }
                     }
-                    else
-                    {
-                        Response.Redirect("NegativeResult.aspx");
-                    }
+                }
+                else
+                {
+
                 }
 
             }

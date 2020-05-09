@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,33 +21,41 @@ namespace Front_End.Models
 
         }
 
-        public List<String> getGlutenFree()
+        public List<String> getFilters(string para)
         {
-            return glutenFree;
-        }
-        public List<String> getDairyFree()
-        {
-            return dairyFree;
-        }
-        public List<String> getNutFree()
-        {
-            return nutFree;
-        }
-        public List<String> getCornFree()
-        {
-            return cornFree;
-        }
-        public List<String> getVegan()
-        {
-            return vegan;
-        }
-        public List<String> getVegetarian()
-        {
-            return vegetarian;
-        }
-        public List<String> getPescatarian()
-        {
-            return pescatarian;
+            if(para == "GlutenFree")
+            {
+                return glutenFree;
+            }
+            else if(para == "DairyFree")
+            {
+                return dairyFree;
+            }
+            else if(para == "NutFree")
+            {
+                return nutFree;
+            }
+            else if(para == "CornFree")
+            {
+                return cornFree;
+            }
+            else if(para == "Vegan")
+            {
+                return vegan;
+            }
+            else if(para == "Vegetarian")
+            {
+                return vegetarian;
+            }
+            else if(para == "Pescetarian")
+            {
+                return pescatarian;
+            }
+            else
+            {
+                List<String> empty = new List<String>;
+                return empty;
+            }
         }
     }
 }
