@@ -21,7 +21,9 @@ create table if not exists FoodFilter (
     GlutenFree int not null,
     DairyFree int not null,
     NutFree int not null,
+    CornFree int not null,
     Vegan int not null,
+    Vegetarian int not null,
     Pescatarian int not null,
     Primary key (FoodID)
 );

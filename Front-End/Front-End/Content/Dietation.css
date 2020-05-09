@@ -72,17 +72,17 @@
 }
 
 html {
-    height: 200vh;
+    height: 100vh;
     font-family: Muli-700, sans-serif;
 }
 
 body {
     background-color: #ccc;
-    height: 200vh;
+    height: 100vh;
 }
 
 .container {
-    height: 200vh;
+    height: 100vh;
     background-color: #fff;
     padding: 5%;
     border-left: 1px solid #f26722;
@@ -99,6 +99,12 @@ body {
     margin-right: auto;
     height: 70%;
     width: 70%;
+}
+
+.dietation-h3 {
+    color: #f26722;
+    font-weight: 700;
+    font-size: larger;
 }
 
 .dietation-btn {
@@ -118,8 +124,8 @@ body {
 }
 
 .dietation-img-btn {
-    max-height: 5%;
-    max-width: 5%;
+    max-height: 20%;
+    max-width: 20%;
     margin-top: .5%;
     margin-bottom: .5%;
     margin-left: .25%;

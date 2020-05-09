@@ -17,6 +17,7 @@ namespace Front_End.Pages
 
         protected void btnFilterInfo_Click(object sender, EventArgs e)
         {
+            /*
             PredefinedFilters predefFilt = new PredefinedFilters();
             if(ddlPredefinedFilterSelection.SelectedIndex == 0)
             {
@@ -73,7 +74,7 @@ namespace Front_End.Pages
                 {
                     lbxFilterListInfo.Items.Add(element);
                 }
-            }
+            } */
         }
     }
 }

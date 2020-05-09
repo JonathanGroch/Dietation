@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="row">
-                <asp:CheckBoxList ID="cblFilters" runat="server" CssClass="dietation-checkbox">
+                <asp:CheckBoxList ID="cblFilters" runat="server" RepeatDirection="Horizontal">
                     <asp:ListItem Value="GlutenFree">Gluten Free</asp:ListItem>
                     <asp:ListItem Value="DairyFree">Dairy Free</asp:ListItem>
                     <asp:ListItem Value="NutFree">Nut Free</asp:ListItem>
@@ -58,15 +58,18 @@
             <hr />
         <div class="row">
             <div class="col">
-                <h3>Follow us at these Links.</h3>
+                <h3 class="dietation-h3">Follow us at these Links.</h3>
                 <asp:ImageButton ID="ibnFacebook" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-facebook-3-240.png" CausesValidation="False" ImageAlign="Left" />
                 <asp:ImageButton ID="ibnYoutube" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-youtube-3-240.png" CausesValidation="False" ImageAlign="Left" />
                 <asp:ImageButton ID="ibnInstagram" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-instagram-13-240.png" CausesValidation="False" ImageAlign="Left" />
                 <asp:ImageButton ID="ibnSnapchat" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-snapchat-3-240.png" CausesValidation="False" ImageAlign="Left" />
             </div>
             <div class="col">
-                <h3>Have a question? Contact us here.</h3>
-                <a>Support@Dietation.com</a>
+                <h3 class="dietation-h3">Have a question? Contact us here.
+                </h3>
+                <asp:TextBox ID="txtSupport" runat="server" Columns="64" Rows="5" TextMode="MultiLine"></asp:TextBox>
+                <br />
+                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="dietation-btn" Text="Submit" />
             </div>
         </div>
         </form>

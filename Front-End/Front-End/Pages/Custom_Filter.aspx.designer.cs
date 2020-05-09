@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Front_End {
-    
-    
-    public partial class Custom_Filter {
-        
+namespace Front_End
+{
+
+
+    public partial class Custom_Filter
+    {
+
         /// <summary>
         /// main_filter control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm main_filter;
-        
+
         /// <summary>
         /// lblFilterLabel control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFilterLabel;
-        
+
         /// <summary>
         /// txtFilterTitle control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFilterTitle;
-        
+
         /// <summary>
         /// btnRenameTitle control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRenameTitle;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// txtSearchIngredient control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSearchIngredient;
-        
+
         /// <summary>
         /// btnAddIngredient control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddIngredient;
-        
+
         /// <summary>
         /// btnRemoveItem control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRemoveItem;
-        
+
         /// <summary>
         /// btnClearList control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnClearList;
-        
+
         /// <summary>
         /// lblFilterTitle control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFilterTitle;
-        
+
         /// <summary>
         /// lbxViewableFilterList control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lbxViewableFilterList;
-        
+
         /// <summary>
         /// ctnSaveFilter control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ctnSaveFilter;
-        
+
         /// <summary>
         /// btnClearFilter control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnClearFilter;
-        
+
         /// <summary>
         /// ibnFacebook control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnFacebook;
-        
+
         /// <summary>
         /// ibnYoutube control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnYoutube;
-        
+
         /// <summary>
         /// ibnInstagram control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnInstagram;
-        
+
         /// <summary>
         /// ibnSnapchat control.
         /// </summary>
@@ -164,5 +166,23 @@ namespace Front_End {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnSnapchat;
+
+        /// <summary>
+        /// txtSupport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSupport;
+
+        /// <summary>
+        /// btnSubmitSupport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmitSupport;
     }
 }

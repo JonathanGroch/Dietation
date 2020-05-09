@@ -56,20 +56,30 @@ namespace Front_End
 
         protected void ctnSaveFilter_Click(object sender, EventArgs e)
         {
+            List<String> listOfIngredients = new List<String>();
+            foreach (ListItem li in lbxViewableFilterList.Items)
+            {
+                listOfIngredients.Add(li.ToString());
+            }
+            
             if(Session["CustomerFilter1"] == null)
             {
-                CustomFilter cf1 = new CustomFilter(txtFilterTitle.Text, lbxViewableFilterList.Items.Cast<String>().ToList());
+                CustomFilter cf1 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
                 Session["CustomFilter1"] = cf1;
             }
             else if(Session["CustomerFilter2"] == null)
             {
-                CustomFilter cf2 = new CustomFilter(txtFilterTitle.Text, lbxViewableFilterList.Items.Cast<String>().ToList());
+                CustomFilter cf2 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
                 Session["CustomFilter2"] = cf2;
             }
             else if(Session["CustomerFilter3"] == null)
             {
-                CustomFilter cf3 = new CustomFilter(txtFilterTitle.Text, lbxViewableFilterList.Items.Cast<String>().ToList());
+                CustomFilter cf3 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
                 Session["CustomFilter3"] = cf3;
+            }
+            else
+            {
+
             }
             Response.Redirect("Main.aspx");
 

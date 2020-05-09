@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Front_End.Pages {
-    
-    
-    public partial class FilterInformation {
-        
+namespace Front_End.Pages
+{
+
+
+    public partial class FilterInformation
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// ddlPredefinedFilterSelection control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPredefinedFilterSelection;
-        
+
         /// <summary>
         /// btnFilterInfo control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnFilterInfo;
-        
+
         /// <summary>
         /// lbxFilterListInfo control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lbxFilterListInfo;
-        
+
         /// <summary>
         /// ibnFacebook control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnFacebook;
-        
+
         /// <summary>
         /// ibnYoutube control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnYoutube;
-        
+
         /// <summary>
         /// ibnInstagram control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnInstagram;
-        
+
         /// <summary>
         /// ibnSnapchat control.
         /// </summary>
@@ -83,5 +85,23 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnSnapchat;
+
+        /// <summary>
+        /// txtSupport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSupport;
+
+        /// <summary>
+        /// btnSubmitSupport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmitSupport;
     }
 }

@@ -219,12 +219,14 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CompareListsSearching.cs" />
     <Compile Include="Models\CustomFilter.cs" />
     <Compile Include="Models\FDAFoodInfo.cs" />
     <Compile Include="Models\jsonFoodList.cs" />
     <Compile Include="Models\PredefinedFilters.cs" />
     <Compile Include="Models\SimpleAPICall.cs" />
     <Compile Include="Models\Encryption.cs" />
+    <Compile Include="Models\SQLAccess.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Pages\Custom_Filter.aspx.cs">
       <DependentUpon>Custom_Filter.aspx</DependentUpon>
