@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    &nbsp;<asp:Button ID="btnRenameTitle" runat="server" OnClick="btnRenameTitle_Click" Text="Rename Title" CssClass="dietation-btn" />
+                    &nbsp;<asp:Button ID="btnRenameTitle" runat="server" OnClick="btnRenameTitle_Click" Text="Rename Title" CssClass="btn dietation-btn" />
 
                 </div>
             </div>
@@ -41,13 +41,13 @@
                     <asp:TextBox ID="txtSearchIngredient" runat="server" Columns="32"></asp:TextBox>
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
-                    <asp:Button ID="btnAddIngredient" runat="server" Text="Add Ingredient" OnClick="btnAddIngredient_Click" CssClass="dietation-btn" />
+                    <asp:Button ID="btnAddIngredient" runat="server" Text="Add Ingredient" OnClick="btnAddIngredient_Click" CssClass="btn dietation-btn" />
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
-                    <asp:Button ID="btnRemoveItem" runat="server" Text="Remove Selected Item" OnClick="btnRemoveItem_Click" CssClass="dietation-btn" />
-                    <asp:Button ID="btnClearList" runat="server" Text="Clear List" OnClick="btnClearList_Click" CssClass="dietation-btn" />
+                    <asp:Button ID="btnRemoveItem" runat="server" Text="Remove Selected Item" OnClick="btnRemoveItem_Click" CssClass="btn dietation-btn" />
+                    <asp:Button ID="btnClearList" runat="server" Text="Clear List" OnClick="btnClearList_Click" CssClass="btn dietation-btn" />
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
                  <h3>Banned Ingredients on 
@@ -59,12 +59,12 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    <asp:Button ID="ctnSaveFilter" runat="server" Text="Save Filter" CssClass="dietation-btn" OnClick="ctnSaveFilter_Click" />
+                    <asp:Button ID="ctnSaveFilter" runat="server" Text="Save Filter" CssClass="btn dietation-btn" OnClick="ctnSaveFilter_Click" />
 
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    <asp:Button ID="btnClearFilter" runat="server" Text="Clear Filter" OnClick="btnClearFilter_Click" CssClass="dietation-btn" />
+                    <asp:Button ID="btnClearFilter" runat="server" Text="Clear Filter" OnClick="btnClearFilter_Click" CssClass="btn dietation-btn" />
 
                 </div>
             </div>
@@ -81,7 +81,7 @@
                 </h3>
                 <asp:TextBox ID="txtSupport" runat="server" Columns="64" Rows="5" TextMode="MultiLine"></asp:TextBox>
                 <br />
-                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="dietation-btn" Text="Submit" />
+                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="btn dietation-btn" Text="Submit" />
             </div>
         </div>
         </div>
