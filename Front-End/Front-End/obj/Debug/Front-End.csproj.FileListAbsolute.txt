@@ -188,3 +188,4 @@ D:\Dietation\Front-End\Front-End\bin\System.Memory.dll
 D:\Dietation\Front-End\Front-End\bin\System.Runtime.CompilerServices.Unsafe.dll
 D:\Dietation\Front-End\Front-End\bin\System.Numerics.Vectors.dll
 D:\Dietation\Front-End\Front-End\bin\MySql.Data.xml
+D:\Dietation\Front-End\Front-End\obj\Debug\Front-End.csprojAssemblyReference.cache
