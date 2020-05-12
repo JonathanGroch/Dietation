@@ -33,14 +33,15 @@
                     <asp:ListItem Value="5">Vegetarian</asp:ListItem>
                     <asp:ListItem Value="6">Pescatarian</asp:ListItem>
                 </asp:DropDownList>
-                <asp:Button ID="btnFilterInfo" runat="server" CssClass="dietation-btn" Text="Show Filter Banned Ingredients" OnClick="btnFilterInfo_Click" />
+                <asp:Button ID="btnFilterInfo" runat="server" CssClass="btn dietation-btn" Text="Show Filter Banned Ingredients" OnClick="btnFilterInfo_Click" />
+                &nbsp;<asp:Button ID="btnMain" runat="server" CssClass="btn dietation-btn" Text="Main Page" />
                 </div>
                 <div class="row">
-                    <asp:ListBox ID="lbxFilterListInfo" runat="server"></asp:ListBox>
+                    <asp:ListBox ID="lbxFilterListInfo" runat="server" Height="100%" Rows="15" Width="100%"></asp:ListBox>
                 </div>
             </div>
             <div class="col">
-                <h3>Dietation Mission Statement</h3>
+                <h3 class="dietation-h3">Dietation Mission Statement</h3>
                 <p>Lorem ipsum dolor sit amet, at summo nullam postea per, per ea sint 
                     aeterno invidunt, ceteros sapientem eam an. Suas luptatum mandamus pro
                     ea. Ne falli congue iudico sea, id vis elitr praesent scripserit, mei
@@ -66,7 +67,7 @@
                 </h3>
                 <asp:TextBox ID="txtSupport" runat="server" Columns="64" Rows="5" TextMode="MultiLine"></asp:TextBox>
                 <br />
-                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="dietation-btn" Text="Submit" />
+                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="btn dietation-btn" Text="Submit" />
             </div>
         </div>
     </div>

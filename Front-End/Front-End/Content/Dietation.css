@@ -70,19 +70,29 @@
     url('../fonts/muli-v20-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
     url('../fonts/muli-v20-latin-700italic.svg#Muli') format('svg'); /* Legacy iOS */
 }
-
+@media only sceen and (max-width: 660) {
+    html {
+        height: 100vh;
+    }
+    body {
+        height: 100vh;
+    }
+    .container {
+        height: 100vh;
+    }
+}
 html {
-    height: 100vh;
+    height: 190vh;
     font-family: Muli-700, sans-serif;
 }
 
 body {
     background-color: #ccc;
-    height: 100vh;
+    height: 190vh;
 }
 
 .container {
-    height: 100vh;
+    height: 190vh;
     background-color: #fff;
     padding: 5%;
     border-left: 1px solid #f26722;

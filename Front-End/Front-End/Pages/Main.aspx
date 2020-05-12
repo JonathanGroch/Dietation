@@ -35,10 +35,10 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <asp:TextBox ID="txtSearchBox" runat="server" Font-Italic="True" placeholder="Search the product here..." Columns="64"></asp:TextBox>
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnSearchButton" runat="server" Text="Search!" OnClick="btnSearchButton_Click" CssClass="dietation-btn" />
+                <asp:Button ID="btnSearchButton" runat="server" Text="Search!" OnClick="btnSearchButton_Click" CssClass="btn dietation-btn" />
             &nbsp;
-            <asp:Button ID="btnCreateCustom" runat="server" Text="Create Custom Filter" OnClick="btnCreateCustom_Click" CssClass="dietation-btn" />
-            <asp:Button ID="btnFiltersList" runat="server" CssClass="dietation-btn" Text="More information on Filters" OnClick="btnFiltersList_Click" />
+            <asp:Button ID="btnCreateCustom" runat="server" Text="Create Custom Filter" OnClick="btnCreateCustom_Click" CssClass="btn dietation-btn" />
+            <asp:Button ID="btnFiltersList" runat="server" CssClass="btn dietation-btn" Text="More information on Filters" OnClick="btnFiltersList_Click" />
             </div>
         </div>
         <div class="row">
@@ -69,7 +69,7 @@
                 </h3>
                 <asp:TextBox ID="txtSupport" runat="server" Columns="64" Rows="5" TextMode="MultiLine"></asp:TextBox>
                 <br />
-                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="dietation-btn" Text="Submit" />
+                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="btn dietation-btn" Text="Submit" />
             </div>
         </div>
         </form>

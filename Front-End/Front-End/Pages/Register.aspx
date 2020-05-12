@@ -47,7 +47,7 @@
              <asp:TextBox ID="txtRegisterPassword2" runat="server" TextMode="Password"></asp:TextBox>
          </div>
          <div class="row">
-             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="dietation-btn" />
+             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="btn dietation-btn" />
              <asp:Label ID="lblErrorMsg" runat="server"></asp:Label>
          </div>
     </div>
