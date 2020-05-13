@@ -25,11 +25,13 @@ namespace APICaller
         {
 
             HttpClient http = new HttpClient();
+            //These parameters are used for specifying the query
+            string parameters = "&dataType=Branded";
             string Url = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=cvL8bjuRaD1XBClk9THXae22G4zWcfC55qdGprSl&query=";
 
             //Replaces blank spaces with %20 for querying
             foodSearchName = foodSearchName.Replace(" ", "%20");
-            Url = Url + foodSearchName;
+            Url = Url + foodSearchName + parameters;
 
             HttpResponseMessage response = http.GetAsync(new Uri(Url)).Result;
             string responseBody = response.Content.ReadAsStringAsync().Result;
@@ -50,7 +52,7 @@ namespace APICaller
                 //Containing the food's name and fdcID
                 foreach (var foodItem in FoodResults.foods)
                 {
-                    FoodList.Add(new FDAFoodInfo(foodItem.description, foodItem.fdcId));
+                    FoodList.Add(new FDAFoodInfo(foodItem.description, foodItem.fdcId, foodItem.brandOwner));
 
                     //Goes through each nutrient in the nutrient list and adds that to the current FDAFoodInfo's ingredient list
                     foreach (var nutrientItem in foodItem.foodNutrients)
@@ -69,9 +71,7 @@ namespace APICaller
         {
             //String to search
             string foodSearch = "Cheddar Cheese";
-
             List<FDAFoodInfo> FoodList = SearchFDADatabase(foodSearch);
-
             //Example how to handle if no food item is found. SearchFDADatabase will return null.
             if (FoodList == null)
             {
@@ -80,7 +80,6 @@ namespace APICaller
             else
             {
                 int count;
-
                 //Goes through and prints out the information for each food item
                 foreach (var foodItem in FoodList)
                 {
@@ -88,14 +87,12 @@ namespace APICaller
                     Console.WriteLine("ID: " + foodItem.foodID);
                     Console.WriteLine("Name: " + foodItem.foodName + "\n");
                     Console.WriteLine("Ingredients List: ");
-
                     //Prints out information for each nutrient in the ingredients list
                     foreach (var nutrientItem in foodItem.foodIngredients)
                     {
                         Console.WriteLine(foodItem.foodIngredients[count]);
                         count++;
                     }
-
                     Console.WriteLine();
                 }
             }
