@@ -11,7 +11,14 @@ namespace Front_End
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["LoginId"] == null)
+            {
+                Response.Redirect("Login_Page.aspx");
+            }
+            else
+            {
 
+            }
         }
     }
 }

@@ -26,7 +26,7 @@ namespace APICaller
 
             HttpClient http = new HttpClient();
             string Url = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=cvL8bjuRaD1XBClk9THXae22G4zWcfC55qdGprSl&query=";
-
+            
             //Replaces blank spaces with %20 for querying
             foodSearchName = foodSearchName.Replace(" ", "%20");
             Url = Url + foodSearchName;

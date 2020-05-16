@@ -19,6 +19,7 @@ namespace Front_End.Objects
         private String lastName;
         private String pass;
         private static Random random = new Random();
+        private List<String> recentItems;
 
 
         public User(String emailAddress)

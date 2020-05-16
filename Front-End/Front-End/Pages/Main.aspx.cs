@@ -245,13 +245,6 @@ namespace Front_End.Pages
                                 Response.Redirect("NegativeResult.aspx");
                             }
                         }
-                        Parallel.Invoke(() =>
-                        {
-
-                        }, () =>
-                        {
-
-                        });
 
                     }
                     else if (rdr.HasRows)
