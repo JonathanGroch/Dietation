@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using JSONParser;
-
+using System.Linq;
 
 namespace APICaller
 {
@@ -25,11 +25,13 @@ namespace APICaller
         {
 
             HttpClient http = new HttpClient();
+            //These parameters are used for specifying the query
+            string parameters = "&dataType=Branded";
             string Url = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=cvL8bjuRaD1XBClk9THXae22G4zWcfC55qdGprSl&query=";
             
             //Replaces blank spaces with %20 for querying
             foodSearchName = foodSearchName.Replace(" ", "%20");
-            Url = Url + foodSearchName;
+            Url = Url + foodSearchName + parameters;
 
             HttpResponseMessage response = http.GetAsync(new Uri(Url)).Result;
             string responseBody = response.Content.ReadAsStringAsync().Result;
@@ -59,11 +61,22 @@ namespace APICaller
                         FoodList.Add(new FDAFoodInfo(foodItem.description, foodItem.fdcId, foodItem.brandOwner));
                     }
 
+                    var delimiters = new char[] { ',', '(', '[', ')', ']' };
+                    FoodList[FoodList.Count - 1].foodIngredients = foodItem.ingredients.Split(delimiters).ToList();
+                    for(int j = 0; j < FoodList[FoodList.Count - 1].foodIngredients.Count; j++)
+                    {
+                        if(String.IsNullOrEmpty(FoodList[FoodList.Count - 1].foodIngredients.ElementAt(j)) ||
+                            string.IsNullOrWhiteSpace(FoodList[FoodList.Count - 1].foodIngredients.ElementAt(j))) {
+                            FoodList[FoodList.Count - 1].foodIngredients.RemoveAt(j);
+                        }
+                    }
+
                     //Goes through each nutrient in the nutrient list and adds that to the current FDAFoodInfo's ingredient list
-                    foreach (var nutrientItem in foodItem.foodNutrients)
+
+                    /*foreach (var nutrientItem in foodItem.foodNutrients)
                     {
                         FoodList[FoodList.Count - 1].foodIngredients.Add(nutrientItem.nutrientName);
-                    }
+                    } */
                 }
                 return FoodList;
             }

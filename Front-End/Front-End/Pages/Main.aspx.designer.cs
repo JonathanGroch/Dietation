@@ -105,6 +105,15 @@ namespace Front_End.Pages
         protected global::System.Web.UI.WebControls.CheckBoxList cblFilters;
 
         /// <summary>
+        /// cblFilterValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cblFilterValidator;
+
+        /// <summary>
         /// ibnFacebook control.
         /// </summary>
         /// <remarks>

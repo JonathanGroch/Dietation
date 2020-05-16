@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -103,7 +104,13 @@ namespace Front_End.Pages
                     }
 
                 }
-                selectedProduct += "from foodfilter where FoodName = \'" + searchTerm + "\'";
+                List<FDAFoodInfo> info = new SimpleAPIClass(searchTerm).getFoodInfo();
+                FDAFoodInfo topValue = info.ElementAt(0);
+                if (info == null)
+                {
+                    Response.Redirect("UnknownResult.aspx");
+                }
+                selectedProduct += "from foodfilter where FoodName = \'" + topValue.foodName + "\'";
                 MySqlCommand cmd1 = new MySqlCommand(selectedProduct, mysqlConnection);
                 MySqlDataReader rdr = cmd1.ExecuteReader();
 
@@ -113,38 +120,28 @@ namespace Front_End.Pages
                     //Nothing in database
                     if (!rdr.HasRows)
                     {
-                        List<FDAFoodInfo> info = new SimpleAPIClass(searchTerm).getFoodInfo();
-                        if (info == null)
+                        CompareListsSearching cls = new CompareListsSearching();
+                        PredefinedFilters preFilters = new PredefinedFilters();
+                        SQLAccess sqla = new SQLAccess();
+                        sqla.FillIngredients(topValue.foodName, topValue.foodIngredients);
+                        sqla.FillPrefilters(topValue.foodName, topValue.foodBrand, topValue.foodIngredients);
+                        Session["ProductName"] = topValue.foodName;
+                        foreach (string s in selected)
                         {
-                            Response.Redirect("UnknownResult.aspx");
+                            if (!cls.Compare(preFilters.getFilters(s), topValue.foodIngredients))
+                            {
+                                directionFlag = false;
+                                break;
+                            }
+                        }
+                        if (directionFlag)
+                        {
+                            Response.Redirect("PositiveResult.aspx");
+
                         }
                         else
                         {
-                            //Future Feature have a list of items for the customer to choose from when searching
-                            FDAFoodInfo principleFood = info.ElementAt(0);
-                            CompareListsSearching cls = new CompareListsSearching();
-                            PredefinedFilters preFilters = new PredefinedFilters();
-                            SQLAccess sqla = new SQLAccess();
-                            sqla.FillIngredients(principleFood.foodName, principleFood.foodIngredients);
-                            sqla.FillPrefilters(principleFood.foodName, principleFood.foodIngredients);
-                            Session["ProductName"] = principleFood.foodName;
-                            foreach (string s in selected)
-                            {
-                                if (!cls.Compare(preFilters.getFilters(s), principleFood.foodIngredients))
-                                {
-                                    directionFlag = false;
-                                    break;
-                                }
-                            }
-                            if (directionFlag)
-                            {
-                                Response.Redirect("PositiveResult.aspx");
-
-                            }
-                            else
-                            {
-                                Response.Redirect("NegativeResult.aspx");
-                            }
+                            Response.Redirect("NegativeResult.aspx");
                         }
 
                     }
@@ -179,71 +176,62 @@ namespace Front_End.Pages
                 {
                     if (!rdr.HasRows)
                     {
-                        List<FDAFoodInfo> info = new SimpleAPIClass(searchTerm).getFoodInfo();
-                        if (info == null)
+                        //Future Feature have a list of items for the customer to choose from when searching
+                        SQLAccess sqla = new SQLAccess();
+                        sqla.FillIngredients(topValue.foodName, topValue.foodIngredients);
+                        sqla.FillPrefilters(topValue.foodName, topValue.foodBrand, topValue.foodIngredients);
+                        CompareListsSearching cls = new CompareListsSearching();
+                        PredefinedFilters preFilters = new PredefinedFilters();
+                        Session["ProductName"] = topValue.foodName;
+                        foreach (string s in selected)
                         {
-                            Response.Redirect("UnknownResult.aspx");
-                        }
-                        else
-                        {
-                            //Future Feature have a list of items for the customer to choose from when searching
-                            FDAFoodInfo principleFood = info.ElementAt(0);
-                            SQLAccess sqla = new SQLAccess();
-                            sqla.FillIngredients(principleFood.foodName, principleFood.foodIngredients);
-                            sqla.FillPrefilters(principleFood.foodName, principleFood.foodIngredients);
-                            CompareListsSearching cls = new CompareListsSearching();
-                            PredefinedFilters preFilters = new PredefinedFilters();
-                            Session["ProductName"] = principleFood.foodName;
-                            foreach (string s in selected)
+                            if (!cls.Compare(preFilters.getFilters(s), topValue.foodIngredients))
                             {
-                                if (!cls.Compare(preFilters.getFilters(s), principleFood.foodIngredients))
+                                directionFlag = false;
+                                break;
+                            }
+                        }
+                        if (directionFlag)
+                        {
+
+                            List<List<String>> customFilters = new List<List<String>>();
+                            foreach (ListItem item in cblFilters.Items)
+                            {
+                                switch (item.Value)
+                                {
+                                    case "0":
+                                        CustomFilter cf1 = (CustomFilter)Session["CustomFilter1"];
+                                        customFilters.Add(cf1.Ingredients);
+                                        break;
+                                    case "1":
+                                        CustomFilter cf2 = (CustomFilter)Session["CustomFilter2"];
+                                        customFilters.Add(cf2.Ingredients);
+                                        break;
+                                    case "2":
+                                        CustomFilter cf3 = (CustomFilter)Session["CustomFilter3"];
+                                        customFilters.Add(cf3.Ingredients);
+                                        break;
+                                }
+                            }
+                            foreach (List<String> ls in customFilters)
+                            {
+                                if (!cls.Compare(ls, topValue.foodIngredients))
                                 {
                                     directionFlag = false;
                                     break;
                                 }
                             }
-                            if (directionFlag)
-                            {
-
-                                List<List<String>> customFilters = new List<List<String>>();
-                                foreach (ListItem item in cblFilters.Items)
-                                {
-                                    switch (item.Value)
-                                    {
-                                        case "0":
-                                            CustomFilter cf1 = (CustomFilter)Session["CustomFilter1"];
-                                            customFilters.Add(cf1.Ingredients);
-                                            break;
-                                        case "1":
-                                            CustomFilter cf2 = (CustomFilter)Session["CustomFilter2"];
-                                            customFilters.Add(cf2.Ingredients);
-                                            break;
-                                        case "2":
-                                            CustomFilter cf3 = (CustomFilter)Session["CustomFilter3"];
-                                            customFilters.Add(cf3.Ingredients);
-                                            break;
-                                    }
-                                }
-                                foreach (List<String> ls in customFilters)
-                                {
-                                    if (!cls.Compare(ls, principleFood.foodIngredients))
-                                    {
-                                        directionFlag = false;
-                                        break;
-                                    }
-                                }
 
 
-                            }
-                            if (directionFlag)
-                            {
-                                Response.Redirect("PositiveResult.aspx");
+                        }
+                        if (directionFlag)
+                        {
+                            Response.Redirect("PositiveResult.aspx");
 
-                            }
-                            else
-                            {
-                                Response.Redirect("NegativeResult.aspx");
-                            }
+                        }
+                        else
+                        {
+                            Response.Redirect("NegativeResult.aspx");
                         }
 
                     }
@@ -308,6 +296,10 @@ namespace Front_End.Pages
                     }
                 }
 
+            }
+            catch(ThreadAbortException except)
+            {
+                Console.WriteLine("Exception ThreadAborted: {0}", except.Message);
             }
             catch
             {

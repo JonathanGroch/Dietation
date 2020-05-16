@@ -85,7 +85,7 @@ namespace Front_End.Models
             }
         }
 
-        public void FillPrefilters(String foodName, List<String> ingredients)
+        public void FillPrefilters(String foodName, String foodBrand,  List<String> ingredients)
         {
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
             mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
@@ -93,8 +93,8 @@ namespace Front_End.Models
             {
                 mysqlConnection.Open();
                 PredefinedFilters filters = new PredefinedFilters();
-                String sqlString = "insert into foodfilter (FoodName, GlutenFree, DairyFree, NutFree, CornFree, Vegan, Vegetarian, Pescatarian)" +
-                    "values('" + foodName + "', " + filters.addPredefinedFilters(ingredients) + ");";
+                String sqlString = "insert into foodfilter (FoodName, FoodBrand, GlutenFree, DairyFree, NutFree, CornFree, Vegan, Vegetarian, Pescatarian)" +
+                    "values('" + foodName + "', '" + foodBrand + "', " + filters.addPredefinedFilters(ingredients) + ");";
                 MySqlCommand cmd1 = new MySqlCommand(sqlString, mysqlConnection);
                 cmd1.ExecuteNonQuery();
 
@@ -108,5 +108,7 @@ namespace Front_End.Models
                 mysqlConnection.Close();
             }
         }
+
+        
     }
 }

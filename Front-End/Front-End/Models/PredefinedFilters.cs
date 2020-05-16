@@ -178,7 +178,8 @@ namespace Front_End.Models
                     result += "0, ";
                 }
             }
-            return result.Substring(0, result.Length - 2);
+            string resultant = result.Substring(0, result.Length - 2);
+            return resultant;
         }
     }
 }
