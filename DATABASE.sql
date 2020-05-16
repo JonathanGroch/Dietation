@@ -18,6 +18,7 @@ create table if not exists Users (
 create table if not exists FoodFilter (
 	FoodID int not null auto_increment,
     FoodName varchar(255) not null,
+    FoodBrand varchar(255),
     GlutenFree int not null,
     DairyFree int not null,
     NutFree int not null,
