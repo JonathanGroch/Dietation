@@ -7,7 +7,7 @@
     <title></title>
     <link href="../Content/bootstrap.css" rel="stylesheet" />
         <link href="../Content/bootstrap.css" rel="stylesheet" />
-    <link href="../Content/Dietation.css" rel="stylesheet" />
+    <link href="../Content/Approval.css" rel="stylesheet" />
 </head>
 <body>
 <form id="form1" runat="server">
@@ -20,31 +20,31 @@
                 <p>First Name</p>
         </div>
         <div class="row">
-            <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtFirstName" placeholder="Your firstname..." runat="server"></asp:TextBox>
         </div>
         <div class="row">
                 <p>Last Name</p>
         </div>
         <div class="row">
-                <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtLastName" placeholder="Your lastname..." runat="server"></asp:TextBox>
         </div> 
         <div class="row">
              <p>Your Email</p>
          </div>
          <div class="row">
-             <asp:TextBox ID="txtRegisterEmail" runat="server"></asp:TextBox>
+             <asp:TextBox ID="txtRegisterEmail" placeholder="Your email..." runat="server"></asp:TextBox>
          </div>
          <div class="row">
              <p>Password</p>
          </div>
          <div class="row">
-             <asp:TextBox ID="txtRegisterPassword" runat="server" TextMode="Password"></asp:TextBox>
+             <asp:TextBox ID="txtRegisterPassword" placeholder="Your password..." runat="server" TextMode="Password"></asp:TextBox>
          </div>
          <div class="row">
              <p>Confirm Password</p>
          </div>
          <div class="row">
-             <asp:TextBox ID="txtRegisterPassword2" runat="server" TextMode="Password"></asp:TextBox>
+             <asp:TextBox ID="txtRegisterPassword2" placeholder="Confirm your password..." runat="server" TextMode="Password"></asp:TextBox>
          </div>
          <div class="row">
              <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="btn dietation-btn" />

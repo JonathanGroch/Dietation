@@ -22,7 +22,11 @@
                 </div>
                 <div class="col-md-4 offset-4">
                     <div class="row">
-                        
+                        <div class="text-center">
+                            <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
+                            <br />
+                            <asp:Label ID="lblEmail" runat="server" Text=""></asp:Label>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -22,6 +22,7 @@ namespace Front_End
                 SQLAccess sqla = new SQLAccess();
                 sqla.GetUserInformation(Session["LoginId"].ToString(), information);
 
+
             }
         }
     }
