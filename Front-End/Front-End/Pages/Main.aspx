@@ -44,10 +44,11 @@
             </div>
         </div>
         <div class="row">
-            <asp:RequiredFieldValidator ID="rfvSearchBox" runat="server" ControlToValidate="txtSearchBox" CssClass="text-danger" ErrorMessage="Must enter a product before searching!" ValidationGroup="SearchQuery"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="rfvSearchBox" runat="server" ControlToValidate="txtSearchBox" CssClass="text-danger" ErrorMessage="Must enter a product before searching!" ValidationGroup="SearchQuery" Display="Dynamic"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="ctvCheckboxValidator" runat="server" CssClass="text-danger" Display="Dynamic" ErrorMessage="Must choose at least one filter option before searching!" OnServerValidate="ctvCheckboxValidator_ServerValidate" ValidationGroup="SearchQuery"></asp:CustomValidator>
         </div>
         <div class="row">
-                <asp:CheckBoxList ID="cblFilters" runat="server" RepeatDirection="Horizontal">
+                <asp:CheckBoxList ID="cblFilters" runat="server" RepeatDirection="Horizontal" ValidationGroup="SearchQuery">
                     <asp:ListItem Value="GlutenFree">Gluten Free</asp:ListItem>
                     <asp:ListItem Value="DairyFree">Dairy Free</asp:ListItem>
                     <asp:ListItem Value="NutFree">Nut Free</asp:ListItem>
@@ -75,7 +76,7 @@
                 </h3>
                 <asp:TextBox ID="txtSupport" runat="server" Columns="64" Rows="5" TextMode="MultiLine"></asp:TextBox>
                 <br />
-                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="btn dietation-btn" Text="Submit" />
+                <asp:Button ID="btnSubmitSupport" runat="server" CssClass="btn dietation-btn" Text="Submit" ValidationGroup="CheckboxQuery" />
             </div>
         </div>
         </form>

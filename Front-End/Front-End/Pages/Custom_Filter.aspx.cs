@@ -11,10 +11,6 @@ namespace Front_End
     public partial class Custom_Filter : System.Web.UI.Page
     {
         private int lbxIndex = -1;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         protected void btnAddIngredient_Click(object sender, EventArgs e)
         {
@@ -56,33 +52,60 @@ namespace Front_End
 
         protected void ctnSaveFilter_Click(object sender, EventArgs e)
         {
-            List<String> listOfIngredients = new List<String>();
-            foreach (ListItem li in lbxViewableFilterList.Items)
+            if (Page.IsValid)
             {
-                listOfIngredients.Add(li.ToString());
+                List<String> listOfIngredients = new List<String>();
+                foreach (ListItem li in lbxViewableFilterList.Items)
+                {
+                    listOfIngredients.Add(li.ToString());
+                }
+
+                if (Session["CustomerFilter1"] == null)
+                {
+                    CustomFilter cf1 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
+                    Session["CustomFilter1"] = cf1;
+                }
+                else if (Session["CustomerFilter2"] == null)
+                {
+                    CustomFilter cf2 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
+                    Session["CustomFilter2"] = cf2;
+                }
+                else if (Session["CustomerFilter3"] == null)
+                {
+                    CustomFilter cf3 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
+                    Session["CustomFilter3"] = cf3;
+                }
+                else
+                {
+
+                }
+                Response.Redirect("Main.aspx");
+
             }
-            
-            if(Session["CustomerFilter1"] == null)
+        }
+
+        protected void ctvIngredientList_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if(lbxViewableFilterList.Items.Count == 0) 
             {
-                CustomFilter cf1 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
-                Session["CustomFilter1"] = cf1;
-            }
-            else if(Session["CustomerFilter2"] == null)
-            {
-                CustomFilter cf2 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
-                Session["CustomFilter2"] = cf2;
-            }
-            else if(Session["CustomerFilter3"] == null)
-            {
-                CustomFilter cf3 = new CustomFilter(txtFilterTitle.Text, listOfIngredients);
-                Session["CustomFilter3"] = cf3;
+                args.IsValid = false;
             }
             else
             {
-
+                args.IsValid = true; 
             }
-            Response.Redirect("Main.aspx");
+        }
 
+        protected void ctvFilterTitle_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if(lblFilterTitle.Text == "")
+            {
+                args.IsValid = false;
+            }
+            else
+            {
+                args.IsValid = true;
+            }
         }
     }
 }

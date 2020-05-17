@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Front_End.Pages
-{
-
-
-    public partial class Main
-    {
-
+namespace Front_End.Pages {
+    
+    
+    public partial class Main {
+        
         /// <summary>
         /// main_search control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm main_search;
-
+        
         /// <summary>
         /// btnLogin control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
-
+        
         /// <summary>
         /// pnlLogin control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlLogin;
-
+        
         /// <summary>
         /// lblUsername control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUsername;
-
+        
         /// <summary>
         /// lnbUserInformation control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnbUserInformation;
-
+        
         /// <summary>
         /// lnbSignOut control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnbSignOut;
-
+        
         /// <summary>
         /// txtSearchBox control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSearchBox;
-
+        
         /// <summary>
         /// btnSearchButton control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearchButton;
-
+        
         /// <summary>
         /// btnCreateCustom control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreateCustom;
-
+        
         /// <summary>
         /// btnFiltersList control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnFiltersList;
-
+        
         /// <summary>
         /// rfvSearchBox control.
         /// </summary>
@@ -112,7 +110,16 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSearchBox;
-
+        
+        /// <summary>
+        /// ctvCheckboxValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator ctvCheckboxValidator;
+        
         /// <summary>
         /// cblFilters control.
         /// </summary>
@@ -121,7 +128,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBoxList cblFilters;
-
+        
         /// <summary>
         /// ibnFacebook control.
         /// </summary>
@@ -130,7 +137,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnFacebook;
-
+        
         /// <summary>
         /// ibnYoutube control.
         /// </summary>
@@ -139,7 +146,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnYoutube;
-
+        
         /// <summary>
         /// ibnInstagram control.
         /// </summary>
@@ -148,7 +155,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnInstagram;
-
+        
         /// <summary>
         /// ibnSnapchat control.
         /// </summary>
@@ -157,7 +164,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ibnSnapchat;
-
+        
         /// <summary>
         /// txtSupport control.
         /// </summary>
@@ -166,7 +173,7 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSupport;
-
+        
         /// <summary>
         /// btnSubmitSupport control.
         /// </summary>
