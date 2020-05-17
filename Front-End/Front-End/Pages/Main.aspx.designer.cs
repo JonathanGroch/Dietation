@@ -51,6 +51,15 @@ namespace Front_End.Pages
         protected global::System.Web.UI.WebControls.Label lblUsername;
 
         /// <summary>
+        /// lnbUserInformation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnbUserInformation;
+
+        /// <summary>
         /// lnbSignOut control.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace Front_End.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnFiltersList;
+
+        /// <summary>
+        /// rfvSearchBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSearchBox;
 
         /// <summary>
         /// cblFilters control.

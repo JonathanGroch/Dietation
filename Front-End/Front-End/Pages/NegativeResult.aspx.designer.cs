@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Front_End.Pages {
-    
-    
-    public partial class NegativeResult {
-        
+namespace Front_End.Pages
+{
+
+
+    public partial class NegativeResult
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// lblResultFood control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace Front_End.Pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblResultFood;
-        
+
         /// <summary>
         /// btnReturnHome control.
         /// </summary>

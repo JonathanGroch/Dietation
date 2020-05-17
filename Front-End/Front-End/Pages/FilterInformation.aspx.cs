@@ -39,5 +39,10 @@ namespace Front_End.Pages
 
             
         }
+
+        protected void btnMain_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Main.aspx");
+        }
     }
 }

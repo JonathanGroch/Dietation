@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Front_End.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,9 @@ namespace Front_End
             }
             else
             {
+                List<String> information = new List<String>();
+                SQLAccess sqla = new SQLAccess();
+                sqla.GetUserInformation(Session["LoginId"].ToString(), information);
 
             }
         }

@@ -14,27 +14,32 @@
     <div class="user_information_page">
         <div class="container">
             <div class="row">
-                <div class="dietation_user_banner">
-                    <img src="" alt="Dietation Banner" />
-                </div>
+                <img class="banner_img" src="../Images/3226_Dietation_RB-01.png" />
             </div>
             <div class="row">
-                <div class="user_information_block_1">
-                    <div class="col-sm-4 col-md-3 col-lg-2">
-                        <img src="" alt="Name_Icon" />
-                        <img src="" alt="Email_Icon" />
-            
-                    </div>
-                    <div class="col-sm-8 col-md-9 col-lg-10">
-                        <asp:Label ID="userNameInfo" runat="server" Text="Label"></asp:Label>
-                        <asp:Label ID="userEmailInfo" runat="server" Text=""></asp:Label>
+                <div class="text-center">
+                    <h3>Your Profile</h3>
+                </div>
+                <div class="col-md-4 offset-4">
+                    <div class="row">
+                        
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="user_information_block_2">
-                    <h3>Saved Filters</h3>
-                    
+                <div class="col">
+                    <h3 class="dietation-h3">Follow us at these Links.</h3>
+                        <asp:ImageButton ID="ibnFacebook" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-facebook-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                        <asp:ImageButton ID="ibnYoutube" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-youtube-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                        <asp:ImageButton ID="ibnInstagram" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-instagram-13-240.png" CausesValidation="False" ImageAlign="Left" />
+                        <asp:ImageButton ID="ibnSnapchat" runat="server" CssClass="dietation-img-btn" ImageUrl="~/Images/iconmonstr-snapchat-3-240.png" CausesValidation="False" ImageAlign="Left" />
+                </div>
+                <div class="col">
+                    <h3 class="dietation-h3">Have a question? Contact us here.
+                    </h3>
+                    <asp:TextBox ID="txtSupport" runat="server" Columns="64" Rows="5" TextMode="MultiLine"></asp:TextBox>
+                    <br />
+                    <asp:Button ID="btnSubmitSupport" runat="server" CssClass="btn dietation-btn" Text="Submit" />
                 </div>
             </div>
         </div>

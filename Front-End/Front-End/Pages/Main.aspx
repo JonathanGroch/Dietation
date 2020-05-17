@@ -16,6 +16,7 @@
             <asp:Button ID="btnLogin" runat="server" CssClass="dietation-btn" Text="Login" OnClick="btnLogin_Click" />
             <asp:Panel ID="pnlLogin" runat="server" Visible="False">
                 <asp:Label ID="lblUsername" runat="server"></asp:Label>
+                <asp:LinkButton ID="lnbUserInformation" runat="server" OnClick="lnbUserInformation_Click">Go to Profile</asp:LinkButton>
                 <asp:LinkButton ID="lnbSignOut" runat="server" OnClick="lnbSignOut_Click">Sign out</asp:LinkButton>
             </asp:Panel>
         </div>
@@ -33,13 +34,17 @@
             <hr />
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <asp:TextBox ID="txtSearchBox" runat="server" Font-Italic="True" placeholder="Search the product here..." Columns="64"></asp:TextBox>
+                <asp:TextBox ID="txtSearchBox" runat="server" Font-Italic="True" placeholder="Search the product here..." Columns="64" ValidationGroup="SearchQuery"></asp:TextBox>
                 &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnSearchButton" runat="server" Text="Search!" OnClick="btnSearchButton_Click" CssClass="btn dietation-btn" />
+                <asp:Button ID="btnSearchButton" runat="server" Text="Search!" OnClick="btnSearchButton_Click" CssClass="btn dietation-btn" ValidationGroup="SearchQuery" />
             &nbsp;
             <asp:Button ID="btnCreateCustom" runat="server" Text="Create Custom Filter" OnClick="btnCreateCustom_Click" CssClass="btn dietation-btn" />
             <asp:Button ID="btnFiltersList" runat="server" CssClass="btn dietation-btn" Text="More information on Filters" OnClick="btnFiltersList_Click" />
+                
             </div>
+        </div>
+        <div class="row">
+            <asp:RequiredFieldValidator ID="rfvSearchBox" runat="server" ControlToValidate="txtSearchBox" CssClass="text-danger" ErrorMessage="Must enter a product before searching!" ValidationGroup="SearchQuery"></asp:RequiredFieldValidator>
         </div>
         <div class="row">
                 <asp:CheckBoxList ID="cblFilters" runat="server" RepeatDirection="Horizontal">

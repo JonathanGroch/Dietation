@@ -346,5 +346,10 @@ namespace Front_End.Pages
         {
             Response.Redirect("Login_Page.aspx");
         }
+
+        protected void lnbUserInformation_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("User_Information_Page.aspx");
+        }
     }
 }
