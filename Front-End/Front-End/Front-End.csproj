@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Content\Approval.css" />
     <Content Include="Content\Dietation.css" />
     <Content Include="Images\3226_Dietation_RB-01.png" />
     <Content Include="Images\iconmonstr-facebook-3-240.png" />

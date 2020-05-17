@@ -6,11 +6,11 @@
 <head runat="server">
     <title></title>
         <link href="../Content/bootstrap.css" rel="stylesheet" />
-    <link href="../Content/Dietation.css" rel="stylesheet" />
+    <link href="../Content/Approval.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="positive_div">
+        <div class="positive">
             <div class="positive_result">
                 <img src="../Images/iconmonstr-thumb-10-240.png" />
                 <br />

@@ -34,7 +34,7 @@
                     <asp:ListItem Value="6">Pescatarian</asp:ListItem>
                 </asp:DropDownList>
                 <asp:Button ID="btnFilterInfo" runat="server" CssClass="btn dietation-btn" Text="Show Filter Banned Ingredients" OnClick="btnFilterInfo_Click" />
-                &nbsp;<asp:Button ID="btnMain" runat="server" CssClass="btn dietation-btn" Text="Main Page" />
+                &nbsp;<asp:Button ID="btnMain" runat="server" CssClass="btn dietation-btn" Text="Main Page" OnClick="btnMain_Click" />
                 </div>
                 <div class="row">
                     <asp:ListBox ID="lbxFilterListInfo" runat="server" Height="100%" Rows="15" Width="100%"></asp:ListBox>

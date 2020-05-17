@@ -11,7 +11,15 @@ namespace Front_End.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblResultFood.Text = Session["ProductName"].ToString();
+            if(Session["ProductName"] != null)
+            {
+                lblResultFood.Text = Session["ProductName"].ToString();
+            }
+            else
+            {
+                lblResultFood.Text = "Error: Product Not Found";
+            }
+            
         }
 
         protected void btnReturnHome_Click(object sender, EventArgs e)

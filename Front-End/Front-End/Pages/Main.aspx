@@ -60,7 +60,6 @@
                     <asp:ListItem Value="2">Custom Filter 3</asp:ListItem>
                 </asp:CheckBoxList>
             <br />
-            <asp:CustomValidator ID="cblFilterValidator" runat="server" ClientValidationFunction="checkBoxValidator" ErrorMessage="Must pick at least one checkbox. " CssClass="text-danger"></asp:CustomValidator>
         </div>
             <hr />
         <div class="row">
