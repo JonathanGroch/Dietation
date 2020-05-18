@@ -8,21 +8,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: #aaa;
     margin: 1% 1% 1% 1%;
     padding: 1% 1% 1% 1%;
+    max-width: 30%;
+    max-height: 30%;
 }
 
 .register_page {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
     background-color: #aaa;
     margin: 1% 1% 1% 1%;
     padding: 1% 1% 1% 1%;
+    max-width: 40%;
 }
 
 .positive {

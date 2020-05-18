@@ -1,4 +1,5 @@
-﻿using Front_End.Objects;
+﻿using Front_End.Models;
+using Front_End.Objects;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace Front_End.Pages
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            //Stuff to do check to see if there's already a user with the same email addresss
             if(txtRegisterPassword.Text == txtRegisterPassword2.Text)
             {
                 User u = new User(txtRegisterEmail.Text, txtFirstName.Text, txtRegisterPassword.Text, txtLastName.Text);
@@ -34,11 +36,22 @@ namespace Front_End.Pages
                 try
                 {
                     mysqlConnection.Open();
+                    SQLAccess sqla = new SQLAccess();
+                    if(!sqla.CheckEmailAddress(txtRegisterEmail.Text))
+                    {
+                        lblErrorMsg.Text = "Email address is already registered" +
+                            " either login into " + txtRegisterEmail.Text + " or choose a different" +
+                            " email address to register with";
+                    }
+                    else
+                    {
+                        MySqlCommand cmd = new MySqlCommand(u.sqlInsertInto(), mysqlConnection);
+                        cmd.ExecuteNonQuery();
+                        Session["LoginId"] = u.getLoginId();
+                        Session["LoginName"] = txtFirstName.Text + " " + txtLastName.Text;
+                        Response.Redirect("Main.aspx");
+                    }
 
-                    MySqlCommand cmd = new MySqlCommand(u.sqlInsertInto(), mysqlConnection);
-                    cmd.ExecuteNonQuery();
-                    Session["LoginId"] = u.getLoginId();
-                    Session["LoginName"] = txtFirstName.Text + " " + txtLastName.Text;
                 }
                 catch
                 {
@@ -47,7 +60,6 @@ namespace Front_End.Pages
                 finally
                 {
                     mysqlConnection.Close();
-                    Response.Redirect("Main.aspx");
                 }
             }
             else

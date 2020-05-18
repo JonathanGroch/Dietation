@@ -24,6 +24,14 @@ namespace Front_End.Models
         }
     }
 
+    public class EmailAddressRegistered: Exception
+    {
+        public EmailAddressRegistered(string message): base(message)
+        {
+
+        }
+    }
+
     public class IngredientsEmpty: Exception
     {
         public IngredientsEmpty(string message): base(message)
@@ -33,6 +41,34 @@ namespace Front_End.Models
     }
     public class SQLAccess
     {
+        public bool CheckEmailAddress(string emailAddress)
+        {
+            MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
+            mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
+            try
+            {
+                mysqlConnection.Open();
+                string sqlString = "select EmailAddress from users where emailAddress='" + emailAddress + "';";
+                MySqlCommand cmd1 = new MySqlCommand(sqlString, mysqlConnection);
+                MySqlDataReader rdr = cmd1.ExecuteReader();
+                if (rdr.HasRows)
+                {
+                    throw (new EmailAddressRegistered("Email Address is already registered, either" +
+                        " login or use a different email address."));
+                }
+                return true;
+            }
+            catch(EmailAddressRegistered e)
+            {
+                Console.WriteLine("An exception has occured on SQL Access: {0}", e.Message);
+                return false;
+            }
+            finally
+            {
+                mysqlConnection.Close();
+            }
+        }
+
         public void GetIngredients(string foodName, List<String> result)
         {
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
