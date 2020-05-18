@@ -26,22 +26,25 @@
 
                     <asp:Label ID="lblFilterLabel" runat="server" Text="Enter Filter Title: "></asp:Label>
 
-                    <asp:TextBox ID="txtFilterTitle" runat="server" Columns="32"></asp:TextBox>
+                    <asp:TextBox ID="txtFilterTitle" runat="server" Columns="32" ValidationGroup="Filter"></asp:TextBox>
+
+                    <asp:RequiredFieldValidator ID="rfvFilterTitle" runat="server" ControlToValidate="txtFilterTitle" CssClass="text-danger" Display="Dynamic" ErrorMessage="Must enter a filter title." ValidationGroup="Filter"></asp:RequiredFieldValidator>
 
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    &nbsp;<asp:Button ID="btnRenameTitle" runat="server" OnClick="btnRenameTitle_Click" Text="Rename Title" CssClass="btn dietation-btn" />
+                    &nbsp;<asp:Button ID="btnRenameTitle" runat="server" OnClick="btnRenameTitle_Click" Text="Rename Title" CssClass="btn dietation-btn" ValidationGroup="Filter" />
 
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
                     <asp:Label ID="Label1" runat="server" Text="Enter Ingredient: "></asp:Label>
-                    <asp:TextBox ID="txtSearchIngredient" runat="server" Columns="32"></asp:TextBox>
+                    <asp:TextBox ID="txtSearchIngredient" runat="server" Columns="32" ValidationGroup="Ingredient"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvIngredient" runat="server" ControlToValidate="txtSearchIngredient" CssClass="text-danger" Display="Dynamic" ErrorMessage="Must enter an ingredient." ValidationGroup="Ingredient"></asp:RequiredFieldValidator>
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">
-                    <asp:Button ID="btnAddIngredient" runat="server" Text="Add Ingredient" OnClick="btnAddIngredient_Click" CssClass="btn dietation-btn" />
+                    <asp:Button ID="btnAddIngredient" runat="server" Text="Add Ingredient" OnClick="btnAddIngredient_Click" CssClass="btn dietation-btn" ValidationGroup="Ingredient" />
                 </div>
             </div>
             <div class="row">
@@ -53,13 +56,13 @@
                  <h3>Banned Ingredients on 
                      <asp:Label ID="lblFilterTitle" runat="server"></asp:Label>
                  </h3>
-                 <asp:ListBox ID="lbxViewableFilterList" runat="server" OnSelectedIndexChanged="lbxViewableFilterList_SelectedIndexChanged"></asp:ListBox>
+                <asp:ListBox ID="lbxViewableFilterList" runat="server" OnSelectedIndexChanged="lbxViewableFilterList_SelectedIndexChanged" ValidationGroup="SaveFilter"></asp:ListBox>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-6 col-md-6">
 
-                    <asp:Button ID="ctnSaveFilter" runat="server" Text="Save Filter" CssClass="btn dietation-btn" OnClick="ctnSaveFilter_Click" />
+                    <asp:Button ID="ctnSaveFilter" runat="server" Text="Save Filter" CssClass="btn dietation-btn" OnClick="ctnSaveFilter_Click" ValidationGroup="SaveFilter" />
 
                 </div>
                 <div class="col-sm-6 col-lg-6 col-md-6">

@@ -42,6 +42,15 @@ namespace Front_End
         protected global::System.Web.UI.WebControls.TextBox txtFilterTitle;
 
         /// <summary>
+        /// rfvFilterTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFilterTitle;
+
+        /// <summary>
         /// btnRenameTitle control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace Front_End
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSearchIngredient;
+
+        /// <summary>
+        /// rfvIngredient control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvIngredient;
 
         /// <summary>
         /// btnAddIngredient control.

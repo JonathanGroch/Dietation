@@ -45,9 +45,10 @@
         </div>
         <div class="row">
             <asp:RequiredFieldValidator ID="rfvSearchBox" runat="server" ControlToValidate="txtSearchBox" CssClass="text-danger" ErrorMessage="Must enter a product before searching!" ValidationGroup="SearchQuery"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="ctvCheckboxValidator" runat="server" CssClass="text-danger" Display="Dynamic" ErrorMessage="Must choose at least one filter option before searching!" OnServerValidate="ctvCheckboxValidator_ServerValidate" ValidationGroup="SearchQuery"></asp:CustomValidator>
         </div>
         <div class="row">
-                <asp:CheckBoxList ID="cblFilters" runat="server" RepeatDirection="Horizontal">
+                <asp:CheckBoxList ID="cblFilters" runat="server" RepeatDirection="Horizontal" ValidationGroup="SearchQuery">
                     <asp:ListItem Value="GlutenFree">Gluten Free</asp:ListItem>
                     <asp:ListItem Value="DairyFree">Dairy Free</asp:ListItem>
                     <asp:ListItem Value="NutFree">Nut Free</asp:ListItem>

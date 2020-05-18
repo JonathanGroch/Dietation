@@ -51,6 +51,7 @@ namespace Front_End.Pages
 
         protected void btnSearchButton_Click(object sender, EventArgs e)
         {
+            if(Page.IsValid) { 
             bool directionFlag = true;
             bool customFlag = false;
             string searchTerm = txtSearchBox.Text;
@@ -150,7 +151,7 @@ namespace Front_End.Pages
                     else if (rdr.HasRows)
                     {
                         rdr.Read();
-                        Session["ProductName"] = rdr[selected[0]];
+                        Session["ProductName"] = topValue.foodName;
                         foreach (string s in selected)
                         {
                             int flag = (int)rdr[s];
@@ -238,7 +239,7 @@ namespace Front_End.Pages
                     else if (rdr.HasRows)
                     {
                         rdr.Read();
-                        Session["ProductName"] = rdr[selected[0]].ToString();
+                        Session["ProductName"] = topValue.foodName;
                         foreach (string s in selected)
                         {
                             int flag = (int)rdr[s];
@@ -310,7 +311,8 @@ namespace Front_End.Pages
                 mysqlConnection.Close();
             }
 
-            
+            }
+
         }
 
         protected void btnCreateCustom_Click(object sender, EventArgs e)
@@ -350,6 +352,18 @@ namespace Front_End.Pages
         protected void lnbUserInformation_Click(object sender, EventArgs e)
         {
             Response.Redirect("User_Information_Page.aspx");
+        }
+
+        protected void ctvCheckboxValidator_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (cblFilters.SelectedIndex != -1)
+            {
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
+            }
         }
     }
 }
