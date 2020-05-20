@@ -67,13 +67,14 @@ namespace Front_End.Pages
                     }
                 }
             }
+            //Sql Connection info
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
             mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
             try
             {
                 mysqlConnection.Open();
                 string selectedProduct = "select FoodName, ";
-                
+                //Gets all the predefined filters
                 for(int i = 0; i < selected.Count; i++)
                 {
                     if(!customFlag)
@@ -89,6 +90,7 @@ namespace Front_End.Pages
                     }
                     else
                     {
+                            //Get predefined and detects custom filters 
                         if((selected[i]).All(char.IsDigit))
                         {
                             selectedProduct.Substring(0, selectedProduct.Length - 2);
@@ -105,6 +107,7 @@ namespace Front_End.Pages
                     }
 
                 }
+                //API call to FDA database
                 List<FDAFoodInfo> info = new SimpleAPIClass(searchTerm).getFoodInfo();
                 FDAFoodInfo topValue = info.ElementAt(0);
                 if (info == null)
@@ -114,19 +117,24 @@ namespace Front_End.Pages
                 selectedProduct += "from foodfilter where FoodName = \'" + topValue.foodName + "\'";
                 MySqlCommand cmd1 = new MySqlCommand(selectedProduct, mysqlConnection);
                 MySqlDataReader rdr = cmd1.ExecuteReader();
-
+                //Executes the database search
                 //No Custom Filter
                 if(!customFlag)
                 {
                     //Nothing in database
                     if (!rdr.HasRows)
                     {
+                        //Load in classes, cls -> is a compare list on list
+                        //Load prefilters holds the predefined filter values
                         CompareListsSearching cls = new CompareListsSearching();
                         PredefinedFilters preFilters = new PredefinedFilters();
+                        //sqla commands that fill the database
                         SQLAccess sqla = new SQLAccess();
                         sqla.FillIngredients(topValue.foodName, topValue.foodIngredients);
                         sqla.FillPrefilters(topValue.foodName, topValue.foodBrand, topValue.foodIngredients);
+                        //Sets session cookie to loginId
                         Session["ProductName"] = topValue.foodName;
+                        //Compare predefined filters against ingredients of the product
                         foreach (string s in selected)
                         {
                             if (!cls.Compare(preFilters.getFilters(s), topValue.foodIngredients))
@@ -135,6 +143,7 @@ namespace Front_End.Pages
                                 break;
                             }
                         }
+                        //If direction is false then its a negative value
                         if (directionFlag)
                         {
                             Response.Redirect("PositiveResult.aspx");
@@ -150,8 +159,11 @@ namespace Front_End.Pages
                     //Item detected in database
                     else if (rdr.HasRows)
                     {
+                        //Reads 
                         rdr.Read();
                         Session["ProductName"] = topValue.foodName;
+                        //Looks through the database to see the if predefined filters values
+                        //Equal 0 in any place, if so then return a false
                         foreach (string s in selected)
                         {
                             int flag = (int)rdr[s];
@@ -249,10 +261,11 @@ namespace Front_End.Pages
                                 break;
                             }
                         }
-                        mysqlConnection.Close();
+                        //If predefined filters through back false, why should the program
+                        //search the custom filters?
                         if (directionFlag)
                         {
-
+                            //Searchs the custom filters
                             List<List<String>> customFilters = new List<List<String>>();
                             foreach (ListItem item in cblFilters.Items)
                             {
@@ -335,11 +348,15 @@ namespace Front_End.Pages
 
         protected void lnbSignOut_Click(object sender, EventArgs e)
         {
+            //Reset everything to null, visibility or reassign value texts
             Session["LoginId"] = null;
             Session["LoginName"] = null;
             Session["CustomFilter1"] = null;
             Session["CustomFilter2"] = null;
             Session["CustomFilter3"] = null;
+            cblFilters.Items.FindByValue("0").Text = "Custom_Filter_1";
+            cblFilters.Items.FindByValue("1").Text = "Custom_Filter_2";
+            cblFilters.Items.FindByValue("2").Text = "Custom_Filter_3";
             btnLogin.Visible = true;
             pnlLogin.Visible = false;
         }

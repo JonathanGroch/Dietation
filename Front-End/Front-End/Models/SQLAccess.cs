@@ -41,10 +41,11 @@ namespace Front_End.Models
     }
     public class SQLAccess
     {
+        private string connection = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
         public bool CheckEmailAddress(string emailAddress)
         {
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
-            mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
+            mysqlConnection.ConnectionString = connection;
             try
             {
                 mysqlConnection.Open();
@@ -72,7 +73,7 @@ namespace Front_End.Models
         public void GetIngredients(string foodName, List<String> result)
         {
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
-            mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
+            mysqlConnection.ConnectionString = connection;
             try
             {
                 mysqlConnection.Open();
@@ -107,7 +108,7 @@ namespace Front_End.Models
         {
             
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
-            mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
+            mysqlConnection.ConnectionString = connection;
             try
             {
                 mysqlConnection.Open();
@@ -132,7 +133,7 @@ namespace Front_End.Models
         public void FillPrefilters(String foodName, String foodBrand,  List<String> ingredients)
         {
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
-            mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
+            mysqlConnection.ConnectionString = connection;
             try
             {
                 mysqlConnection.Open();
@@ -156,7 +157,7 @@ namespace Front_End.Models
         public void GetUserInformation(string loginId, List<String> information)
         {
             MySql.Data.MySqlClient.MySqlConnection mysqlConnection = new MySql.Data.MySqlClient.MySqlConnection();
-            mysqlConnection.ConnectionString = "server=127.0.0.1;uid=root;pwd=Defense;database=Dietation";
+            mysqlConnection.ConnectionString = connection;
             try
             {
                 mysqlConnection.Open();
