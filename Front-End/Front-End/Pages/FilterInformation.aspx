@@ -42,16 +42,18 @@
             </div>
             <div class="col">
                 <h3 class="dietation-h3">Dietation Mission Statement</h3>
-                <p>Lorem ipsum dolor sit amet, at summo nullam postea per, per ea sint 
-                    aeterno invidunt, ceteros sapientem eam an. Suas luptatum mandamus pro
-                    ea. Ne falli congue iudico sea, id vis elitr praesent scripserit, mei
-                    ut quodsi repudiare. Esse augue labores sed ne, duo eloquentiam 
-                    theophrastus eu. Pri reque equidem tincidunt ad, ut duo aeterno 
-                    utroque. Pri mollis detracto similique et.</p>
-                <p>Vidisse noluisse et pro. Vim dicit dicam cu. Vim ut adhuc maiorum platonem.
-                    Iusto recteque eam ut, pri quot maiorum eleifend an. Ne mei habemus blandit periculis.</p>
-                <p>Et volutpat liberavisse sea. Duo ei adipiscing liberavisse, sea nostrum invenire cu, tation 
-                    platonem rationibus ne sit. Sumo nostrum suavitate has ei. Pri delectus voluptatum ad.</p>
+                <p>Our mission here at OrangeSustenance from day one is about easing the 
+                    worries and stress of all those that suffer or are limited by 
+                    constricted diets based on medical, lifestyle and or spiritual pressures. 
+                    </p>
+                <p>Because here at OrangeSustenance, we know, I know how difficult it is to find products 
+                    that you can eat, how long it takes to search through products, and how frustrating 
+                    and dangerous it is trying to look through the nutritional information only to miss 
+                    one ingredient only to end up in the hospital? As I said we get. Thus why we have 
+                    brought this service to you so you can enjoy your time doing activities you enjoy, 
+                    instead of the tedium of reading nutrition labels. Because life needs to be lived, 
+                    because life is not lived in a grocery store aisle, not in the emergency room and 
+                    definitely not in the grave. </p>
             </div>
         </div>
         <div class="row">

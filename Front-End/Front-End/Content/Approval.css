@@ -47,6 +47,17 @@
     padding: 1% 1% 1% 1%;
 }
 
+.unknown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: grey;
+    margin: 1% 1% 1% 1%;
+    padding: 1% 1% 1% 1%;
+}
+
 .dietation-btn {
     box-shadow: inset 0px 1px 0px 0px #cf866c;
     background: linear-gradient(to bottom, #f26722 5%, #bc3315 100%);

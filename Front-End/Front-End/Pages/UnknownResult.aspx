@@ -6,12 +6,13 @@
 <head runat="server">
     <title></title>
         <link href="../Content/bootstrap.css" rel="stylesheet" />
-    <link href="../Content/Dietation.css" rel="stylesheet" />
+    <link href="../Content/Approval.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <p>Unknown error has occured. Please contact at us at blah blah </p>
+        <div class="unknown">
+            <p>Either an unknown error has occured in the application or the item entered in the search box is not recognized by the FDA database. Please try again</p>
+            <asp:Button ID="btnReturnToMain" runat="server" Text="Return to Main" CssClass="btn dietation-btn" OnClick="btnReturnToMain_Click" />
         </div>
     </form>
 </body>
